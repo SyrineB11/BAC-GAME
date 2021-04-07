@@ -5,7 +5,7 @@ it's a brain game
 #include<cstdlib>
 #include<ctime>
 using namespace std;
-class Player
+class Game
 {
     private :
        char **nom ;
@@ -21,7 +21,7 @@ class Player
         *(score+i)+=P;
        
     }
-    Player( int num , string nn )
+    Game( int num , string nn )
     {const char alphabet[] = "BACDEFGHIJKLMNOPQRSTUVWXYZ";
     
        size_t indice;
@@ -44,7 +44,7 @@ class Player
     }
  
 }
-        ~Player();
+        ~Game();
         void  affiche();
         bool verif (string,string,char);
         string get_theme() const{
@@ -58,13 +58,13 @@ class Player
 
 
 };
-Player::~Player()
+Game::~Game()
 { 
     delete[] nom ;
     delete[] score;
   
 }
-bool Player::verif(string a,string b,char c)
+bool Game::verif(string a,string b,char c)
 {   
     string n;
       int ok=0;
@@ -103,7 +103,7 @@ main()
   cout<<"    sport or geography or cinema"<<endl;
   cin>>th;
   if ( (th=="cinema" ) || (th=="sport") || (th=="paye"))
-  {Player P(2,th);
+  {Game P(2,th);
   
    
  //get num player//getcinema
