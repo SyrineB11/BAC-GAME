@@ -75,7 +75,7 @@ bool Game::verif(string a,string b,char c)
        ifstream entree(b , ios::in);
         if(!entree)
           {
-             cout<<"ouverture impossible"<<endl;
+             cout<<"can't open"<<endl;
            }
         else
            {
@@ -99,7 +99,7 @@ main()
 
 {  string th;
   cout<<"     WELCOME TO THE BAC GAME"<<endl;
-  cout<<"   ***** Choose your Theme*****"<<endl;
+  cout<<"   ***** Chose your Theme*****"<<endl;
   cout<<"    sport or geography or cinema"<<endl;
   cin>>th;
   if ( (th=="cinema" ) || (th=="sport") || (th=="paye"))
@@ -129,10 +129,10 @@ main()
  for (int i=0;i<numplayer;i++)
  {if (P.get_theme()=="cinema")
      {cout<<"****the first lettre is****    :"<<P.getL()<<endl;
-      cout<<"u choosed the theme cinema"<<endl;
-      cout<<"the theme cinema contains 4 colmn";
+      cout<<"you did chose the theme cinema"<<endl;
+      cout<<"the theme cinema contains 4 columns";
         do
-          { cout<<"choose the colomn you want to write in  C1: for Movies// C2: for actors // C3 :for actress //C4 for Prizes";
+          { cout<<"chose the column you want to write in  C1: for Movies// C2: for actors // C3 :for actress //C4 for Prizes";
             cin>> attricinema;
             if (attricinema=="C1")
               {
@@ -194,12 +194,12 @@ main()
         }while (k=4); 
       }
 
-    else if (P.get_theme()=="pays")
+   else if (P.get_theme()=="pays")
      {cout<<"**the first lettre is**    :"<<P.getL()<<endl;
-      cout<<"u choosed the theme pays"<<endl;
-      cout<<"the theme cinema contains 5 colmn";
+      cout<<"you did chose the theme pays"<<endl;
+      cout<<"the theme cinema contains 5 columns";
         do
-          { cout<<"choose the colomn you want to write in  C1: for pays_afrique// C2: for pays_amerique // C3 :for pays_asie //C4 for pays_europe // C5 for pays_oceanie";
+          { cout<<"chose the column you want to write in  C1: for pays_afrique// C2: for pays_amerique // C3 :for pays_asie //C4 for pays_europe // C5 for pays_oceanie";
             cin>> attripays;
             if (attripays=="C1")
               {
@@ -271,10 +271,10 @@ main()
    else
     {P.get_theme()=="sport";
      {cout<<"**the first lettre is**    :"<<P.getL()<<endl;
-      cout<<"u choosed the theme sport"<<endl;
+      cout<<"you did chose the theme sport"<<endl;
       cout<<"the theme sport contains 5 columns";
         do
-          { cout <<"choose the column you want to write in  C1: for nom sport// C2: for nom machine du sport // C3 :for nom femmes sportives quebecoises //C4 for nom spotifs tunisiens // c5 femme sportives francaises:";
+          { cout <<"chose the column you want to write in  C1: for nom sport// C2: for nom machine du sport // C3 :for nom femmes sportives quebecoises //C4 for nom spotifs tunisiens // c5 femme sportives francaises:";
             cin>> attsport;
             if (attsport=="C1")
               {
@@ -288,8 +288,8 @@ main()
                                   else
                                    P.addscore(i);
                     
-                     }
-            else if (attsport=="c2")
+                                                      }
+               else if (attsport=="c2")
              {
                 k++;
                   string* nom_machine_du_sport = new string[50];
