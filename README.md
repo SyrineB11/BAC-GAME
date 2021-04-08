@@ -295,10 +295,14 @@ int main()
          }
           }
           }
-     }
-     if (th=="sport")
+ }
+    
+
+  }
+
+ if (th=="sport")
      {  cout <<"chose the column you want to write in  C1: for nom sport// C5: for nom machine du sport // C2 :for nom femmes sportives quebecoises //C4 for nom spotifs tunisiens // c1 femme sportives francaises:"<<endl;
-      for (int i=0 ; i<5 ; i++)
+       for (int i=0 ; i<5 ; i++)
        {
          cout<<"what column you want to write in"<<endl;
          cin>>column;
@@ -384,9 +388,9 @@ int main()
           }   
        }
    }
- }
-  cout<<"WE WILL REVEAL THE SCORES !! :"<<endl;
-  P.afficher_tableau_score();
-  return 0;
+  
+    cout<<"WE WILL REVEAL THE SCORES !! :"<<endl;
+    P.afficher_tableau_score();
+    return 0;
 
- }
+}
