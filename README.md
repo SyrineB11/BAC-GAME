@@ -31,7 +31,7 @@ class Game
       size_t indice;
       srand(time(NULL));
       indice = rand() % (25 + 1);
-      L = alphabet[indice];
+      L = alphabet[indice]; 
       return L ;
     }
     Game( int num , string nn )
