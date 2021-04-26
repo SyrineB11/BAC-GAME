@@ -2,332 +2,782 @@
 #include<fstream>
 #include<cstdlib>
 #include<ctime>
+#include<iomanip>
+#include <conio.h>
+#include<cstring>
+#include<map>
+#include<vector>
+#include <algorithm>
 using namespace std;
-class Player
-{
-    private :
-       char **nom ;
-       int* score;
-       int numplayer;
-       string theme ;
-        char L;
+class Game
+{ private :
+    int di;//niveau de difficultée
+   vector<string> name;
+   vector<int> score;
+   multimap<int,string> Total;
+    //int score[20];
+    int numplayer;
+    string theme ;
+    char L;
+  public :
+    void InsertMap()
+    {
+      for (int i=0 ; i<numplayer ; i++)
+      {
+        Total.insert(make_pair(score[i],name[i]));
+      
+      }
+      for (int j=0 ;j<numplayer;j++)
+      {
+        cout<<" PLAYER  "<<name[j]<<" YOUR SCORE IS  : "<<score[j]<<endl;
 
-       ;
-    public :
+      }
+    }
+   
+    void winner()
+    {
+      multimap<int,string>::iterator it;
+     
+       it= Total.end();
+     
+                 vector<int>::iterator pos ;
+                 pos=max_element(score.begin(),score.end());
+                 int n=*pos;
+                 cout<<"THE BEST SCORE IS  :"<< n <<endl ;
+
+                 int nb=count(score.begin(), score.end(),n) ;
+                 if (nb==numplayer)
+                   {
+                    cout<<"WE HAVE NO WINNER HERE !! THANK YOU FOR PLAYING !! YOU CAN PLAY AGAIN !! "<<endl ;
+                   }
+                  else if ((numplayer!=nb) )
+                   { int i=*pos;
+                    for (int i=0 ; i<numplayer ; i++)
+                    { if ( (score[i]==n ))
+                     {
+      
+                      
+                      cout<<"THE WINNER IS =====>    "<<name[i]<<"  <====="<<endl;
+                      cout<<"!!!!!!!!!!CONGRATULATIONS !!!!!!!!!!!"<<endl;
+
+    
+                      
+                      }
+                    }
+                   } 
+                  
+
+
+
+    }
+    
+     
+     
+     
+
+    
     void addscore(int i,int P=0)
-    {
-        *(score+i)+=P;
-       
-    }
-    Player( int num , string nn )
-    {const char alphabet[] = "BACDEFGHIJKLMNOPQRSTUVWXYZ";
-    
-       size_t indice;
-       srand(time(NULL));
-       indice = rand() % (25 + 1);
-       L = alphabet[indice];
+    { 
+      score[i]=score[i]+P;
 
-    char n[20] ;
-    theme = nn;
-    int* score=new int[numplayer];
-    numplayer=num;
-    char  **nom;
-    nom= new char*[numplayer];
-    for(int i=0 ; i<numplayer ; i++)
-    {
-        cout<<"donner un nom d un joueur "<<endl;
-        cin>>n;
-        nom[i]=new char[20];
-        nom[i]=n;
     }
- 
-}
-        ~Player();
-        void  affiche();
-        bool verif (string,string,char);
-        string get_theme() const{
-           return theme ;
-       }
+    char get_L()
+    {
+      const char alphabet[] = "BACDEFGHIJKLMNOPQRSTUVWXYZ";
+      size_t indice;
+      srand(time(NULL));
+      indice = rand() % (25 + 1);
+      L = alphabet[indice];
+      return L ;
+    }
+    
+    Game( int num , string nn ,int d)
+    {
+      
+      di=d;
+      theme = nn;
+      numplayer=num;
+      
+    
+      string nor;
+      for(int i=0 ; i<num ; i++)
+      {
+        cout<<"Give each  player a name "<<endl;
+        cin>>nor;
+        name.push_back(nor);
+        score.push_back(0);
+        
+      }
+    }
+        ~Game();
+        int verif(string , string , char);
+        string get_theme() const
+        {
+          return theme ;
+        }
        int getnumplayer() const
-       { return numplayer;}
-       char getL() const
-       {return L;}
-    
-
+       { 
+        return numplayer;
+       }
 
 };
-Player::~Player()
-{ 
-    delete[] nom ;
-    delete[] score;
-  
-}
-bool Player::verif(string a,string b,char c)
-{   
-    string n;
-      int ok=0;
-      int k=0;
-    if (c!=L)
-    {k=100;}
-    else{
-       ifstream entree(b , ios::in);
-        if(!entree)
-          {
-             cout<<"ouverture impossible"<<endl;
-           }
-        else
-           {
-             while (entree >> n)
-               if (n==a)
-                {
-                    k=1;
-                }
-        entree.close();
-           }}
-    if (k==1)
-    {
-        return 10;}
-    else 
-    {
-        return 100;
-    }
-}
 
-main()
+Game::~Game()
 {
     
-Player P(2,"cinema"); //get num player//getcinema
-
-int k=0;
-int N;
-int numplayer=P.getnumplayer();
-string attricinema;
-string attsport;
-string attripays;
-P.get_theme();
-string kelma;
-string word;
-
-cout<<"GAME RULES: "<<endl;
-cout<<"Dear player those are the Rules  F.E.A.I "<<endl;;
-cout<<"  *The first Lettre in the  entered words is Always Uppercase"<<endl;
-cout<<"  *Every right answer equals +2pts & each wrong equals -2pts"<<endl;
-cout<<"  *At the end of the GAME there is one winner"<<endl;
-cout<<"  *In Case the players Got equal High scores those players CAN !choose! to play other tourneys to select  one winner "<<endl;
-cout<<"LET'S BEGIN"<<endl;
-
-for (int i=0;i<numplayer;i++)
- {if (P.get_theme()=="cinema")
-     {cout<<"****the first lettre is****    :"<<P.getL()<<endl;
-      cout<<"u choosed the theme cinema"<<endl;
-      cout<<"the theme cinema contains 4 colmn";
-        do
-          { cout<<"choose the colomn you want to write in  C1: for Movies// C2: for actors // C3 :for actress //C4 for Prizes";
-            cin>> attricinema;
-            if (attricinema=="C1")
-              {
-                  k++;
-                  string* Moviesword = new string[50];
-                    for(int j=0;j<numplayer;j++)
-                        {cin>>kelma;
-                            *(Moviesword+j)=kelma;}
-                                if ((P.verif(*(Moviesword+i),"Movies.txt",P.getL())==10)) //Moviesword is an array of strings so to give'im access to the first charc we need [i][0]
-                                    {P.addscore(i,2); }//si juste la condition le score augmente de 2pts sinon diminue de 2pts
-                                  else
-                                   P.addscore(i);
-                    
-                     }
-            else if (attricinema=="C2")
-             {
-                k++;
-                  string* Moviesword = new string[50];
-                    for(int j=0;j<numplayer;j++)
-                        {cin>>kelma;
-                            *(Moviesword+j)=kelma;}
-                                if ((P.verif(*(Moviesword+i),"Actors.txt",P.getL())==10)) //Moviesword is an array of strings so to give'im access to the first charc we need [i][0]
-                                    {P.addscore(i,2); }//si juste la condition le score augmente de 2pts sinon diminue de 2pts
-                                  else
-                                   P.addscore(i);
-
-
-             }
-             else if (attricinema=="C3")
-             {
-                k++;
-                  string* Moviesword = new string[50];
-                    for(int j=0;j<numplayer;j++)
-                        {cin>>kelma;
-                            *(Moviesword+j)=kelma;}
-                                if ((P.verif(*(Moviesword+i),"Actriss.txt",P.getL())==10)) //Moviesword is an array of strings so to give'im access to the first charc we need [i][0]
-                                    {P.addscore(i,2); }//si juste la condition le score augmente de 2pts sinon diminue de 2pts
-                                  else
-                                   P.addscore(i);
-
-
-             }
-             else if (attricinema=="C4")
-             {
-                k++;
-                  string* Moviesword = new string[50];
-                    for(int j=0;j<numplayer;j++)
-                        {cin>>kelma;
-                            *(Moviesword+j)=kelma;}
-                                if ((P.verif(*(Moviesword+i),"Prizes.txt",P.getL())==10)) //Moviesword is an array of strings so to give'im access to the first charc we need [i][0]
-                                    {P.addscore(i,2); }//si juste la condition le score augmente de 2pts sinon diminue de 2pts
-                                  else
-                                   P.addscore(i);
-
-
-          while (k=4);   }
-      else if (P.get_theme()=="pays")
-     {cout<<"**the first lettre is**    :"<<P.getL()<<endl;
-      cout<<"u choosed the theme cinema"<<endl;
-      cout<<"the theme cinema contains 5 colmn";
-        do
-          { cout<<"choose the colomn you want to write in  C1: for pays_afrique// C2: for pays_amerique // C3 :for pays_asie //C4 for pays_europe // C5 for pays_oceanie";
-            cin>> attripays;
-            if (attripays=="C1")
-              {
-                  k++;
-                  string* pays_afrique= new string[50];
-                    for(int j=0;j<numplayer;j++)
-                        {cin>>kelma;
-                            *(pays_afrique+j)=kelma;}
-                                if ((P.verif(*(pays_afrique+i),"pays_afrique.txt",P.getL())==10)) //pays_afrique is an array of strings so to give'im access to the first charc we need [i][0]
-                                    {P.addscore(i,2); }//si juste la condition le score augmente de 2pts sinon diminue de 2pts
-                                  else
-                                   P.addscore(i);
-                    
-                     }
-            if (attripays=="C2")
-             {
-                  k++;
-                  string* pays_amerique= new string[50];
-                    for(int j=0;j<numplayer;j++)
-                        {cin>>kelma;
-                            *(pays_amerique+j)=kelma;}
-                                if ((P.verif(*(pays_amerique+i),"pays_amerique.txt",P.getL())==10)) //pays_afrique is an array of strings so to give'im access to the first charc we need [i][0]
-                                    {P.addscore(i,2); }//si juste la condition le score augmente de 2pts sinon diminue de 2pts
-                                  else
-                                   P.addscore(i);
-             }
-            if(attripays=="C3")
-            {
-                 
-                  k++;
-                  string* pays_asie= new string[50];
-                    for(int j=0;j<numplayer;j++)
-                        {cin>>kelma;
-                            *(pays_asie+j)=kelma;}
-                                if ((P.verif(*(pays_asie+i),"pays_asie.txt",P.getL())==10)) //pays_afrique is an array of strings so to give'im access to the first charc we need [i][0]
-                                    {P.addscore(i,2); }//si juste la condition le score augmente de 2pts sinon diminue de 2pts
-                                  else
-                                   P.addscore(i);
-            }
-            if (attripays=="C4")
-             {
-                  k++;
-                  string* pays_europe= new string[50];
-                    for(int j=0;j<numplayer;j++)
-                        {cin>>kelma;
-                            *(pays_europe+j)=kelma;}
-                                if ((P.verif(*(pays_europe+i),"pays_europe.txt",P.getL())==10)) //pays_afrique is an array of strings so to give'im access to the first charc we need [i][0]
-                                    {P.addscore(i,2); }//si juste la condition le score augmente de 2pts sinon diminue de 2pts
-                                  else
-                                   P.addscore(i);
-             }
-             if(attripays=="C5")
-              {
-                  k++;
-                  string* pays_oceanie= new string[50];
-                    for(int j=0;j<numplayer;j++)
-                        {cin>>kelma;
-                            *(pays_oceanie+j)=kelma;}
-                                if ((P.verif(*(pays_oceanie+i),"pays_oceanie.txt",P.getL())==10)) //pays_afrique is an array of strings so to give'im access to the first charc we need [i][0]
-                                    {P.addscore(i,2); }//si juste la condition le score augmente de 2pts sinon diminue de 2pts
-                                  else
-                                   P.addscore(i);
-                 }      
-                  }while(k=5); 
-
- 
-    
-          } 
-    else
-    {P.get_theme()=="sport";
-     {cout<<"**the first lettre is**    :"<<P.getL()<<endl;
-      cout<<"u choosed the theme sport"<<endl;
-      cout<<"the theme sport contains 5 columns";
-        do
-          { cout <<"choose the column you want to write in  C1: for nom sport// C2: for nom machine du sport // C3 :for nom femmes sportives québecoises //C4 for nom spotifs tunisiens // c5 femme sportives françaises:";
-            cin>> attsport;
-            if (attsport=="C1")
-              {
-                  k++;
-                  string* nomsport = new string[50];
-                    for(int j=0;j<numplayer;j++)
-                        {cin>>kelma;
-                            *(nomsport+j)=kelma;}
-                                if ((P.verif(*(nomsport+i),"nom sport.txt",P.getL())==10)) //nom sport is an array of strings so to give'im access to the first charc we need [i][0]
-                                    {P.addscore(i,2); }//si juste la condition le score augmente de 2pts sinon diminue de 2pts
-                                  else
-                                   P.addscore(i);
-                    
-                     }
-            else if (attsport=="c2")
-             {
-                k++;
-                  string* nom_machine_du_sport = new string[50];
-                    for(int j=0;j<numplayer;j++)
-                        {cin>>kelma;
-                            *(nom_machine_du_sport+j)=kelma;}
-                                if ((P.verif(*(nom_machine_du_sport+i),"nom machine du sport.txt",P.getL())==10)) //nom machine du sport is an array of strings so to give'im access to the first charc we need [i][0]
-                                    {P.addscore(i,2); }//si juste la condition le score augmente de 2pts sinon diminue de 2pts
-                                  else
-                                   P.addscore(i); 
-             }
-            else if(attsport=="c3")
-            {
-                k++;
-                  string* nom_femmes_sportives_québecoises = new string[50];
-                    for(int j=0;j<numplayer;j++)
-                        {cin>>kelma;
-                            *(nom_femmes_sportives_québecoises+j)=kelma;}
-                                if ((P.verif(*(nom_femmes_sportives_québecoises+i),"nom femmes sportives québecoises.txt",P.getL())==10)) //nom femmes sportives québecoises is an array of strings so to give'im access to the first charc we need [i][0]
-                                    {P.addscore(i,2); }//si juste la condition le score augmente de 2pts sinon diminue de 2pts
-                                  else
-                                   P.addscore(i);
-            }
-            else if (attsport=="c4")
-            {
-                k++;
-                  string* nom_spotifs_tunisiens = new string[50];
-                    for(int j=0;j<numplayer;j++)
-                        {cin>>kelma;
-                            *(nom_spotifs_tunisiens+j)=kelma;}
-                                if ((P.verif(*(nom_spotifs_tunisiens+i),"nom spotifs tunisiens.txt",P.getL())==10)) //nom spotifs tunisiens is an array of strings so to give'im access to the first charc we need [i][0]
-                                    {P.addscore(i,2); }//si juste la condition le score augmente de 2pts sinon diminue de 2pts
-                                  else
-                                   P.addscore(i);
-            }
-            else if (attsport=="c5")
-            {
-                k++;
-                  string* nom_femme_sportives_françaises = new string[50];
-                    for(int j=0;j<numplayer;j++)
-                        {cin>>kelma;
-                            *(nom_femme_sportives_françaises+j)=kelma;}
-                                if ((P.verif(*(nom_femme_sportives_françaises+i),"femme sportives françaises.txt",P.getL())==10)) //femme sportives françaises is an array of strings so to give'im access to the first charc we need [i][0]
-                                    {P.addscore(i,2); }//si juste la condition le score augmente de 2pts sinon diminue de 2pts
-                                  else
-                                   P.addscore(i);
-            }
-     }while(k=5);
-   }
-           
-           
-           
-           
+  
+}
+int Game::verif(string mot ,string nom_f,char c)
+{
+    string n;
+    int ok=0;
+    int k=0;
+    if (c!=L)
+    {
+      k=100;
     }
-}while(k=5);
-     }}
+    else
+    {
+      ifstream entree(nom_f , ios::in);
+      if(!entree)
+      {
+        cout<<"ouverture impossible"<<endl;
+      }
+      else
+      {
+        while (entree >> n)
+        if (n==mot)
+        {
+          k=1;
+        }
+      entree.close();
+      }
+    }
+    if (k==1)
+    {
+      return 10;}
+    else
+    {
+      return 100;
+    }
+
+}
+void niveaudiff( double& b ,int c)
+{switch(c) 
+ {case 1 : b=5 ;
+   break;
+  case 2 : b=7;
+   break;
+  case 3 : b=9;
+  break;
+  default : b=10;
+  
+
+
+
+ }
+}
+int main()
+{ string th;
+  int n;
+  int dif;
+  cout<<endl;
+  cout<<"HELLO DEAR PLAYERS WE ARE NOW TAKING YOU TO A NEW BRAIN CHALLENG "<<endl;
+  cout<<endl;
+  cout<<"---- Fill This Questions To Begin ----"<<endl;
+  cout<<endl;
+  cout<<"chose the numbre of players"<<endl;
+  cin>>n;
+  cout<<"chose your theme : pays or sport or cinema" <<endl;
+  cin>>th;
+  cout<<"chose your difficulty level Hard : 1 (maxtime 5 for each answer)  or medium : 2 (maxtime 7 for each answer) or easy : 3 (maxtime 9 for each answer) "<<endl;
+  cin>>dif;
+  cout<<"---------------------------------------------------------------------------------------------------------------" <<endl;
+  Game P(n,th,dif); 
+  cout<< "    ---------------------     "<<endl;
+  cout<<"     WELCOME TO THE BAC GAME    "<<endl;
+  cout<<"     ---------------------  "<<endl;
+  
+  double m=10;
+  int numplayer=P.getnumplayer();
+  string column;
+  double duration=0;
+  double& maxtime=m;
+  
+  P.get_theme();
+  string mot;
+  string word;
+  string kelma;
+  cout<<"GAME RULES: "<<endl;
+
+  cout<<"Dear player those are the Rules  F.E.A.I "<<endl;;
+
+  cout<<"The first Lettre in the  entered words is Always Uppercase"<<endl;
+
+  cout<<"Every right answer equals +2pts & each wrong equals 0pts"<<endl;
+  cout<<"LET'S BEGIN"<<endl;
+  char  L=P.get_L();
+  cout<<"------------------"<<endl;
+  cout<<"THE first lettre is  : "<<L<<endl;
+  cout<<"------------------"<<endl;
+  cout<<"LET'S GO !!"<<endl;
+  cout<<"___________________"<<endl;
+  if (th=="pays")
+  { 
+    cout<<"chose the column you want to write in : C1: for pays_afrique | C2: for pays_amerique | C3 :for pays_asie | C4 for pays_europe | C5 for pays_oceanie"<<endl;
+    for (int i=0 ; i<5 ; i++)
+    {   cout<<"-----------------"<<endl;
+         cout<<"what column you want to write in next ? "<<endl;
+         cin>>column;
+         if (column=="C1")
+         { cout<<"---pays afrique---"<<endl;
+           std::clock_t start;
+           start = std::clock();
+           double duration=0;
+           niveaudiff(maxtime,dif);
+             
+           for(int j=0; j<numplayer ; j++) 
+           {
+             cout<<"Give a word"<<endl;
+          
+             if (duration<maxtime)
+               {  
+                 cin>>kelma;
+                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                 double c=maxtime-duration;
+                 cout << "temps restant: "<<c<<endl ;
+                 if (c<0)
+                 {
+                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                   P.addscore(j);
+                 }
+                 else
+                 {
+                   if ((P.verif(kelma,"pays_afrique.txt",P.get_L())==10))
+                   {
+                   P.addscore(j,2);
+                    }
+                   else 
+                   { 
+                   P.addscore(j);
+                   }
+                 }
+               }
+            }
+         }
+         if (column=="C2")
+         { cout<<"---pays_amerique---"<<endl;
+           std::clock_t start;
+           start = std::clock();
+           double duration=0;
+           niveaudiff(maxtime,dif);
+             
+           for(int j=0; j<numplayer ; j++) 
+           {
+             cout<<"Give a word"<<endl;
+          
+             if (duration<maxtime)
+               {  
+                 cin>>kelma;
+                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                 double c=maxtime-duration;
+                 cout << "temps restant: "<<c<<endl ;
+                 if (c<0)
+                 {
+                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                   P.addscore(j);
+                 }
+                 else
+                 {
+                   if ((P.verif(kelma,"pays_amerique.txt",P.get_L())==10))
+                   {
+                   P.addscore(j,2);
+                    }
+                   else 
+                   { 
+                   P.addscore(j);
+                   }
+                 }
+               }
+            }
+         }
+         if (column=="C3")
+         { cout<<"---pays-asie---"<<endl;
+           std::clock_t start;
+           start = std::clock();
+           double duration=0;
+           niveaudiff(maxtime,dif);
+             
+           for(int j=0; j<numplayer ; j++) 
+           {
+             cout<<"Give a word"<<endl;
+          
+             if (duration<maxtime)
+               {  
+                 cin>>kelma;
+                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                 double c=maxtime-duration;
+                 cout << "temps restant: "<<c<<endl ;
+                 if (c<0)
+                 {
+                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                   P.addscore(j);
+                 }
+                 else
+                 {
+                   if ((P.verif(kelma,"Pays_asie.txt",P.get_L())==10))
+                   {
+                   P.addscore(j,2);
+                    }
+                   else 
+                   { 
+                   P.addscore(j);
+                   }
+                 }
+               }
+            }
+         }
+         if (column=="C4")
+         { cout<<"---pays europe--"<<endl;
+           std::clock_t start;
+           start = std::clock();
+           double duration=0;
+           niveaudiff(maxtime,dif);
+             
+           for(int j=0; j<numplayer ; j++) 
+           {
+             cout<<"Give a word"<<endl;
+          
+             if (duration<maxtime)
+               {  
+                 cin>>kelma;
+                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                 double c=maxtime-duration;
+                 cout << "temps restant: "<<c<<endl ;
+                 if (c<0)
+                 {
+                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                   P.addscore(j);
+                 }
+                 else
+                 {
+                   if ((P.verif(kelma,"pays_europe.txt",P.get_L())==10))
+                   {
+                   P.addscore(j,2);
+                    }
+                   else 
+                   { 
+                   P.addscore(j);
+                   }
+                 }
+               }
+            }
+         }
+         if (column=="C5")
+         { cout<<"---pays oceanie---"<<endl;
+           std::clock_t start;
+           start = std::clock();
+           double duration=0;
+           niveaudiff(maxtime,dif);
+             
+           for(int j=0; j<numplayer ; j++) 
+           {
+             cout<<"Give a word"<<endl;
+          
+             if (duration<maxtime)
+               {  
+                 cin>>kelma;
+                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                 double c=maxtime-duration;
+                 cout << "temps restant: "<<c<<endl ;
+                 if (c<0)
+                 {
+                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                   P.addscore(j);
+                 }
+                 else
+                 {
+                   if ((P.verif(kelma,"pays_oceanie.txt",P.get_L())==10))
+                   {
+                   P.addscore(j,2);
+                    }
+                   else 
+                   { 
+                   P.addscore(j);
+                   }
+                 }
+               }
+            }
+         }
+  }
+ 
+
+
+
+
+
+
+ }
+  if (th=="cinema")
+   {  
+       cout<<"chose the column you want to write in :  C1: for Movies| C2: for actors |C3 :for actress |C4 for Prizes"<<endl;
+       cout<<"---------------"<<endl;
+       for (int i=0 ; i<4 ; i++)
+       { 
+         cout<<"what column you want to write in ?"<<endl;
+         cin>>column;
+         if (column=="C1")
+         { cout<<"---MOVIES---"<<endl;
+           std::clock_t start;
+           start = std::clock();
+           double duration=0;
+           niveaudiff(maxtime,dif);
+             
+           for(int j=0; j<numplayer ; j++) 
+           {
+             cout<<"Give a word"<<endl;
+          
+             if (duration<maxtime)
+               {  
+                 cin>>kelma;
+                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                 double c=maxtime-duration;
+                 cout << "temps restant: "<<c<<endl ;
+                 if (c<0)
+                 {
+                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                   P.addscore(j);
+                 }
+                 else
+                 {
+                   if ((P.verif(kelma,"Movies.txt",P.get_L())==10))
+                   {
+                   P.addscore(j,2);
+                    }
+                   else 
+                   { 
+                   P.addscore(j);
+                   }
+                 }
+               }
+            }
+         }
+         if (column=="C2")
+         { cout<<"---ACTORS---"<<endl;
+           
+           std::clock_t start;
+           start = std::clock();
+           double duration=0;
+           niveaudiff(maxtime,dif);
+           for(int j=0;j<numplayer;j++)
+           {
+             cout<<"Give a word"<<endl;
+             if (duration<maxtime)
+              {
+                 cin>>kelma;
+                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                 double c=maxtime-duration;
+                 cout << "temps restant: "<<c<<endl ;
+                 if (c<0)
+                  {
+                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                   P.addscore(j);
+                  }
+                  else
+                  {
+            
+                    if ((P.verif(kelma,"Actors.txt",P.get_L())==10)) 
+                   {
+                    P.addscore(j,2); 
+                    }
+                    else
+                    { 
+                    P.addscore(j);
+                    }
+                  }
+               }
+             }
+          }
+         if (column=="C3")
+        {cout<<"---ACTRESS---"<<endl;
+                     
+           std::clock_t start;
+           start = std::clock();
+           double duration=0;
+           niveaudiff(maxtime,dif);
+           for(int j=0;j<numplayer;j++)
+            {
+              cout<<"Give a word"<<endl;
+
+                 if (duration<maxtime)
+                 {
+                    cin>>kelma;
+                   duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                    double c=maxtime-duration;
+                    cout << "temps restant: "<<c<<endl ;
+                   if (c<0)
+                   {
+                    cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                    P.addscore(j);
+                    }
+                   else
+                   {
+                     if ((P.verif(kelma,"Actress.txt",P.get_L())==10)) 
+                       {
+                       P.addscore(j,2); 
+                       }
+                      else
+                      {
+                        P.addscore(j);
+                      }
+                   }
+                 }
+             }
+         }
+          
+         if (column=="C4")
+         {cout<<"---Prizes---"<<endl;
+           std::clock_t start;
+           start = std::clock();
+           double duration=0;
+           niveaudiff(maxtime,dif);
+           for(int j=0;j<numplayer;j++)
+           {
+            cout<<"Give a word"<<endl;
+                if (duration<maxtime)
+                 {
+                    cin>>kelma;
+                   duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                    double c=maxtime-duration;
+                    cout << "temps restant: "<<c<<endl ;
+                   if (c<0)
+                   {
+                    cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                    P.addscore(j);
+                    }
+                  
+                    else
+                   {
+                     if ((P.verif(kelma,"Prizes.txt",P.get_L())==10)) 
+                      {
+                      P.addscore(j,2);
+                      }
+                     else
+                     {
+                      P.addscore(j);
+                      }
+                   }
+                }
+          }
+    }
+    
+ }
+  
+
+ if (th=="sport")
+     {  cout <<"chose the column you want to write in  C1: for nom sport| C5: for nom machine du sport | C2 :for nom femmes sportives quebecoises |C4 for nom spotifs tunisiens | C3 femme sportives francaises:"<<endl;
+       for (int i=0 ; i<5 ; i++)
+       { cout<<"-----------------"<<endl;
+         cout<<"what column you want to write in ? "<<endl;
+
+         cin>>column;
+         if (column=="C1")
+         { cout<<"---nom sport---"<<endl;
+           std::clock_t start;
+           start = std::clock();
+           double duration=0;
+           niveaudiff(maxtime,dif);
+             
+           for(int j=0; j<numplayer ; j++) 
+           {
+             cout<<"Give a word"<<endl;
+          
+             if (duration<maxtime)
+               {  
+                 cin>>kelma;
+                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                 double c=maxtime-duration;
+                 cout << "temps restant: "<<c<<endl ;
+                 if (c<0)
+                 {
+                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                   P.addscore(j);
+                 }
+                 else
+                 {
+                   if ((P.verif(kelma,"nom_sport.txt",P.get_L())==10))
+                   {
+                   P.addscore(j,2);
+                    }
+                   else 
+                   { 
+                   P.addscore(j);
+                   }
+                 }
+               }
+            }
+         }
+         if (column=="C2")
+         { cout<<"---nom femme sportives québéquoises---"<<endl;
+           std::clock_t start;
+           start = std::clock();
+           double duration=0;
+           niveaudiff(maxtime,dif);
+             
+           for(int j=0; j<numplayer ; j++) 
+           {
+             cout<<"Give a word"<<endl;
+          
+             if (duration<maxtime)
+               {  
+                 cin>>kelma;
+                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                 double c=maxtime-duration;
+                 cout << "temps restant: "<<c<<endl ;
+                 if (c<0)
+                 {
+                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                   P.addscore(j);
+                 }
+                 else
+                 {
+                   if ((P.verif(kelma,"nom_femmes_sportives_québécoises.txt",P.get_L())==10))
+                   {
+                   P.addscore(j,2);
+                    }
+                   else 
+                   { 
+                   P.addscore(j);
+                   }
+                 }
+               }
+            }
+         }
+         if (column=="C3")
+         { cout<<"---nom femmes sportives françaises---"<<endl;
+           std::clock_t start;
+           start = std::clock();
+           double duration=0;
+           niveaudiff(maxtime,dif);
+             
+           for(int j=0; j<numplayer ; j++) 
+           {
+             cout<<"Give a word"<<endl;
+          
+             if (duration<maxtime)
+               {  
+                 cin>>kelma;
+                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                 double c=maxtime-duration;
+                 cout << "temps restant: "<<c<<endl ;
+                 if (c<0)
+                 {
+                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                   P.addscore(j);
+                 }
+                 else
+                 {
+                   if ((P.verif(kelma,"nom_femmes_sportives_française.txt.txt",P.get_L())==10))
+                   {
+                   P.addscore(j,2);
+                    }
+                   else 
+                   { 
+                   P.addscore(j);
+                   }
+                 }
+               }
+            }
+         }
+         if (column=="C4")
+         { cout<<"---nom spotifs tunisiens---"<<endl;
+           std::clock_t start;
+           start = std::clock();
+           double duration=0;
+           niveaudiff(maxtime,dif);
+             
+           for(int j=0; j<numplayer ; j++) 
+           {
+             cout<<"Give a word"<<endl;
+          
+             if (duration<maxtime)
+               {  
+                 cin>>kelma;
+                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                 double c=maxtime-duration;
+                 cout << "temps restant: "<<c<<endl ;
+                 if (c<0)
+                 {
+                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                   P.addscore(j);
+                 }
+                 else
+                 {
+                   if ((P.verif(kelma,"nom_sportifs_tunisiens.txt",P.get_L())==10))
+                   {
+                   P.addscore(j,2);
+                    }
+                   else 
+                   { 
+                   P.addscore(j);
+                   }
+                 }
+               }
+            }
+         }
+         if (column=="C5")
+         { cout<<"---machine sport---"<<endl;
+           std::clock_t start;
+           start = std::clock();
+           double duration=0;
+           niveaudiff(maxtime,dif);
+             
+           for(int j=0; j<numplayer ; j++) 
+           {
+             cout<<"Give a word"<<endl;
+          
+             if (duration<maxtime)
+               {  
+                 cin>>kelma;
+                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                 double c=maxtime-duration;
+                 cout << "temps restant: "<<c<<endl ;
+                 if (c<0)
+                 {
+                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                   P.addscore(j);
+                 }
+                 else
+                 {
+                   if ((P.verif(kelma,"machine_sport.txt",P.get_L())==10))
+                   {
+                   P.addscore(j,2);
+                    }
+                   else 
+                   { 
+                   P.addscore(j);
+                   }
+                 }
+               }
+            }
+         }
+     }
+    }
+  }
+  
+    cout<<"WE WILL REVEAL THE SCORES !! :"<<endl;
+     P.InsertMap();
+     P.winner();
+     cout<<endl;
+     cout<<"-------------------------------"<<endl;
+     cout<<"THANK YOU FOR PLAYING OUR GAME "<<endl;
+     cout<<"-------------------------------"<<endl;
+     cout<<"! INFO : "<<endl;
+     cout<<"The objective of the BAC GAME is to rely on the creativity of the players to solve the problems without imposing any operating mode"<<endl;
+     cout<<endl;
+     cout<<"SEE YOU AGAIN !!!!!"<<endl;
+     cout<<" \n  "<<endl;
+  return 0;
+
+     
+}
