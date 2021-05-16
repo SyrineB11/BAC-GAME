@@ -1,783 +1,165 @@
-#include<iostream>
-#include<fstream>
-#include<cstdlib>
-#include<ctime>
-#include<iomanip>
-#include <conio.h>
-#include<cstring>
-#include<map>
-#include<vector>
-#include <algorithm>
-using namespace std;
-class Game
-{ private :
-    int di;//niveau de difficultée
-   vector<string> name;
-   vector<int> score;
-   multimap<int,string> Total;
-    //int score[20];
-    int numplayer;
-    string theme ;
-    char L;
-  public :
-    void InsertMap()
-    {
-      for (int i=0 ; i<numplayer ; i++)
-      {
-        Total.insert(make_pair(score[i],name[i]));
-      
-      }
-      for (int j=0 ;j<numplayer;j++)
-      {
-        cout<<" PLAYER  "<<name[j]<<" YOUR SCORE IS  : "<<score[j]<<endl;
-
-      }
-    }
-   
-    void winner()
-    {
-      multimap<int,string>::iterator it;
-     
-       it= Total.end();
-     
-                 vector<int>::iterator pos ;
-                 pos=max_element(score.begin(),score.end());
-                 int n=*pos;
-                 cout<<"THE BEST SCORE IS  :"<< n <<endl ;
-
-                 int nb=count(score.begin(), score.end(),n) ;
-                 if (nb==numplayer)
-                   {
-                    cout<<"WE HAVE NO WINNER HERE !! THANK YOU FOR PLAYING !! YOU CAN PLAY AGAIN !! "<<endl ;
-                   }
-                  else if ((numplayer!=nb) )
-                   { int i=*pos;
-                    for (int i=0 ; i<numplayer ; i++)
-                    { if ( (score[i]==n ))
-                     {
-      
-                      
-                      cout<<"THE WINNER IS =====>    "<<name[i]<<"  <====="<<endl;
-                      cout<<"!!!!!!!!!!CONGRATULATIONS !!!!!!!!!!!"<<endl;
-
-    
-                      
-                      }
-                    }
-                   } 
-                  
+#include "cinema.h"
+#include "ui_cinema.h"
+#include "loser.h"
+#include "winner.h"
+#include "QDebug"
+#include <QMessageBox>
+#include <QTextStream>
+#include "QString"
+#include "ctime"
+#include "conio.h"
+#include "QTimer"
+#include "QTime"
+#include <QFile>
+#include <QIODevice>
+#include <iostream>
+#include <QTextStream>
+#include <QLabel>
+#include <QString>
+#include <QLineEdit>
+#include <QWidgetSet>
 
 
+cinema::cinema(QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::cinema)
 
-    }
-    
-     
-     
-     
-
-    
-    void addscore(int i,int P=0)
-    { 
-      score[i]=score[i]+P;
-
-    }
-    char get_L()
-    {
-      const char alphabet[] = "BACDEFGHIJKLMNOPQRSTUVWXYZ";
-      size_t indice;
-      srand(time(NULL));
-      indice = rand() % (25 + 1);
-      L = alphabet[indice];
-      return L ;
-    }
-    
-    Game( int num , string nn ,int d)
-    {
-      
-      di=d;
-      theme = nn;
-      numplayer=num;
-      
-    
-      string nor;
-      for(int i=0 ; i<num ; i++)
-      {
-        cout<<"Give each  player a name "<<endl;
-        cin>>nor;
-        name.push_back(nor);
-        score.push_back(0);
-        
-      }
-    }
-        ~Game();
-        int verif(string , string , char);
-        string get_theme() const
-        {
-          return theme ;
-        }
-       int getnumplayer() const
-       { 
-        return numplayer;
-       }
-
-};
-
-Game::~Game()
 {
-    
-  
+    ui->setupUi(this);
+
+
 }
-int Game::verif(string mot ,string nom_f,char c)
+
+
+cinema::~cinema()
 {
-    string n;
-    int ok=0;
-    int k=0;
-    if (c!=L)
-    {
-      k=100;
+    delete ui;
+}
+
+void cinema::on_pushButton_clicked()
+
+{   QString L = ui->lineEdit_5->text() ;
+    int score =0 ;
+    QString m1 = ui->lineEdit->text();
+    QFile file1("C:/Users/21694/Documents/jeu1/Movies.txt");
+    if (!file1.open(QIODevice::ReadOnly | QIODevice::Text))
+    { QMessageBox::warning(this,"title","file not open" );
     }
     else
     {
-      ifstream entree(nom_f , ios::in);
-      if(!entree)
+
+
+     QTextStream donnees1(&file1) ;
+
+     QString ligne1;
+      while(! donnees1.atEnd())
       {
-        cout<<"ouverture impossible"<<endl;
-      }
-      else
-      {
-        while (entree >> n)
-        if (n==mot)
-        {
-          k=1;
-        }
-      entree.close();
-      }
+        donnees1 >> ligne1 ;
+
+
+        if (( m1==ligne1) && (m1[0]==L))
+          {
+            score=2+score  ;}
+     file1.close() ;
     }
-    if (k==1)
-    {
-      return 10;}
+    }
+    QString m2 = ui->lineEdit_2->text();
+    QFile file2("C:/Users/21694/Documents/jeu1/Actors.txt");
+    if (!file2.open(QIODevice::ReadOnly | QIODevice::Text))
+      { QMessageBox::warning(this,"title","file not open" );
+      }
     else
-    {
-      return 100;
+      {
+
+       QTextStream donnees2(&file2) ;
+       QString ligne2;
+       while(! donnees2.atEnd())
+       {
+        donnees2 >> ligne2 ;
+
+        if (( m2==ligne2)&&(m2[0]==L))
+          {
+            score=2+score  ;}
+
+
+     file2.close() ;
     }
-
-}
-void niveaudiff( double& b ,int c)
-{switch(c) 
- {case 1 : b=5 ;
-   break;
-  case 2 : b=7;
-   break;
-  case 3 : b=9;
-  break;
-  default : b=10;
-  
-
-
-
- }
-}
-int main()
-{ string th;
-  int n;
-  int dif;
-  cout<<endl;
-  cout<<"HELLO DEAR PLAYERS WE ARE NOW TAKING YOU TO A NEW BRAIN CHALLENG "<<endl;
-  cout<<endl;
-  cout<<"---- Fill This Questions To Begin ----"<<endl;
-  cout<<endl;
-  cout<<"chose the numbre of players"<<endl;
-  cin>>n;
-  cout<<"chose your theme : pays or sport or cinema" <<endl;
-  cin>>th;
-  cout<<"chose your difficulty level Hard : 1 (maxtime 5 for each answer)  or medium : 2 (maxtime 7 for each answer) or easy : 3 (maxtime 9 for each answer) "<<endl;
-  cin>>dif;
-  cout<<"---------------------------------------------------------------------------------------------------------------" <<endl;
-  Game P(n,th,dif); 
-  cout<< "    ---------------------     "<<endl;
-  cout<<"     WELCOME TO THE BAC GAME    "<<endl;
-  cout<<"     ---------------------  "<<endl;
-  
-  double m=10;
-  int numplayer=P.getnumplayer();
-  string column;
-  double duration=0;
-  double& maxtime=m;
-  
-  P.get_theme();
-  string mot;
-  string word;
-  string kelma;
-  cout<<"GAME RULES: "<<endl;
-
-  cout<<"Dear player those are the Rules  F.E.A.I "<<endl;;
-
-  cout<<"The first Lettre in the  entered words is Always Uppercase"<<endl;
-
-  cout<<"Every right answer equals +2pts & each wrong equals 0pts"<<endl;
-  cout<<"LET'S BEGIN"<<endl;
-  char  L=P.get_L();
-  cout<<"------------------"<<endl;
-  cout<<"THE first lettre is  : "<<L<<endl;
-  cout<<"------------------"<<endl;
-  cout<<"LET'S GO !!"<<endl;
-  cout<<"___________________"<<endl;
-  if (th=="pays")
-  { 
-    cout<<"chose the column you want to write in : C1: for pays_afrique | C2: for pays_amerique | C3 :for pays_asie | C4 for pays_europe | C5 for pays_oceanie"<<endl;
-    for (int i=0 ; i<5 ; i++)
-    {   cout<<"-----------------"<<endl;
-         cout<<"what column you want to write in next ? "<<endl;
-         cin>>column;
-         if (column=="C1")
-         { cout<<"---pays afrique---"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-             
-           for(int j=0; j<numplayer ; j++) 
-           {
-             cout<<"Give a word"<<endl;
-          
-             if (duration<maxtime)
-               {  
-                 cin>>kelma;
-                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
-                 double c=maxtime-duration;
-                 cout << "temps restant: "<<c<<endl ;
-                 if (c<0)
-                 {
-                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
-                   P.addscore(j);
-                 }
-                 else
-                 {
-                   if ((P.verif(kelma,"pays_afrique.txt",P.get_L())==10))
-                   {
-                   P.addscore(j,2);
-                    }
-                   else 
-                   { 
-                   P.addscore(j);
-                   }
-                 }
-               }
-            }
-         }
-         if (column=="C2")
-         { cout<<"---pays_amerique---"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-             
-           for(int j=0; j<numplayer ; j++) 
-           {
-             cout<<"Give a word"<<endl;
-          
-             if (duration<maxtime)
-               {  
-                 cin>>kelma;
-                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
-                 double c=maxtime-duration;
-                 cout << "temps restant: "<<c<<endl ;
-                 if (c<0)
-                 {
-                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
-                   P.addscore(j);
-                 }
-                 else
-                 {
-                   if ((P.verif(kelma,"pays_amerique.txt",P.get_L())==10))
-                   {
-                   P.addscore(j,2);
-                    }
-                   else 
-                   { 
-                   P.addscore(j);
-                   }
-                 }
-               }
-            }
-         }
-         if (column=="C3")
-         { cout<<"---pays-asie---"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-             
-           for(int j=0; j<numplayer ; j++) 
-           {
-             cout<<"Give a word"<<endl;
-          
-             if (duration<maxtime)
-               {  
-                 cin>>kelma;
-                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
-                 double c=maxtime-duration;
-                 cout << "temps restant: "<<c<<endl ;
-                 if (c<0)
-                 {
-                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
-                   P.addscore(j);
-                 }
-                 else
-                 {
-                   if ((P.verif(kelma,"Pays_asie.txt",P.get_L())==10))
-                   {
-                   P.addscore(j,2);
-                    }
-                   else 
-                   { 
-                   P.addscore(j);
-                   }
-                 }
-               }
-            }
-         }
-         if (column=="C4")
-         { cout<<"---pays europe--"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-             
-           for(int j=0; j<numplayer ; j++) 
-           {
-             cout<<"Give a word"<<endl;
-          
-             if (duration<maxtime)
-               {  
-                 cin>>kelma;
-                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
-                 double c=maxtime-duration;
-                 cout << "temps restant: "<<c<<endl ;
-                 if (c<0)
-                 {
-                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
-                   P.addscore(j);
-                 }
-                 else
-                 {
-                   if ((P.verif(kelma,"pays_europe.txt",P.get_L())==10))
-                   {
-                   P.addscore(j,2);
-                    }
-                   else 
-                   { 
-                   P.addscore(j);
-                   }
-                 }
-               }
-            }
-         }
-         if (column=="C5")
-         { cout<<"---pays oceanie---"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-             
-           for(int j=0; j<numplayer ; j++) 
-           {
-             cout<<"Give a word"<<endl;
-          
-             if (duration<maxtime)
-               {  
-                 cin>>kelma;
-                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
-                 double c=maxtime-duration;
-                 cout << "temps restant: "<<c<<endl ;
-                 if (c<0)
-                 {
-                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
-                   P.addscore(j);
-                 }
-                 else
-                 {
-                   if ((P.verif(kelma,"pays_oceanie.txt",P.get_L())==10))
-                   {
-                   P.addscore(j,2);
-                    }
-                   else 
-                   { 
-                   P.addscore(j);
-                   }
-                 }
-               }
-            }
-         }
-  }
- 
-
-
-
-
-
-
- }
-  if (th=="cinema")
-   {  
-       cout<<"chose the column you want to write in :  C1: for Movies| C2: for actors |C3 :for actress |C4 for Prizes"<<endl;
-       cout<<"---------------"<<endl;
-       for (int i=0 ; i<4 ; i++)
-       { 
-         cout<<"what column you want to write in ?"<<endl;
-         cin>>column;
-         if (column=="C1")
-         { cout<<"---MOVIES---"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-             
-           for(int j=0; j<numplayer ; j++) 
-           {
-             cout<<"Give a word"<<endl;
-          
-             if (duration<maxtime)
-               {  
-                 cin>>kelma;
-                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
-                 double c=maxtime-duration;
-                 cout << "temps restant: "<<c<<endl ;
-                 if (c<0)
-                 {
-                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
-                   P.addscore(j);
-                 }
-                 else
-                 {
-                   if ((P.verif(kelma,"Movies.txt",P.get_L())==10))
-                   {
-                   P.addscore(j,2);
-                    }
-                   else 
-                   { 
-                   P.addscore(j);
-                   }
-                 }
-               }
-            }
-         }
-         if (column=="C2")
-         { cout<<"---ACTORS---"<<endl;
-           
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-           for(int j=0;j<numplayer;j++)
-           {
-             cout<<"Give a word"<<endl;
-             if (duration<maxtime)
-              {
-                 cin>>kelma;
-                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
-                 double c=maxtime-duration;
-                 cout << "temps restant: "<<c<<endl ;
-                 if (c<0)
-                  {
-                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
-                   P.addscore(j);
-                  }
-                  else
-                  {
-            
-                    if ((P.verif(kelma,"Actors.txt",P.get_L())==10)) 
-                   {
-                    P.addscore(j,2); 
-                    }
-                    else
-                    { 
-                    P.addscore(j);
-                    }
-                  }
-               }
-             }
-          }
-         if (column=="C3")
-        {cout<<"---ACTRESS---"<<endl;
-                     
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-           for(int j=0;j<numplayer;j++)
-            {
-              cout<<"Give a word"<<endl;
-
-                 if (duration<maxtime)
-                 {
-                    cin>>kelma;
-                   duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
-                    double c=maxtime-duration;
-                    cout << "temps restant: "<<c<<endl ;
-                   if (c<0)
-                   {
-                    cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
-                    P.addscore(j);
-                    }
-                   else
-                   {
-                     if ((P.verif(kelma,"Actress.txt",P.get_L())==10)) 
-                       {
-                       P.addscore(j,2); 
-                       }
-                      else
-                      {
-                        P.addscore(j);
-                      }
-                   }
-                 }
-             }
-         }
-          
-         if (column=="C4")
-         {cout<<"---Prizes---"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-           for(int j=0;j<numplayer;j++)
-           {
-            cout<<"Give a word"<<endl;
-                if (duration<maxtime)
-                 {
-                    cin>>kelma;
-                   duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
-                    double c=maxtime-duration;
-                    cout << "temps restant: "<<c<<endl ;
-                   if (c<0)
-                   {
-                    cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
-                    P.addscore(j);
-                    }
-                  
-                    else
-                   {
-                     if ((P.verif(kelma,"Prizes.txt",P.get_L())==10)) 
-                      {
-                      P.addscore(j,2);
-                      }
-                     else
-                     {
-                      P.addscore(j);
-                      }
-                   }
-                }
-          }
     }
-    
- }
-  
+    QString m3 = ui->lineEdit_3->text();
+    QFile file3("C:/Users/21694/Documents/jeu1/Actress.txt");
+    if (!file3.open(QIODevice::ReadOnly | QIODevice::Text))
+      { QMessageBox::warning(this,"title","file not open" );
+      }
+    else
+      {
+       QTextStream donnees3(&file3) ;
+       QString ligne3;
+       while(! donnees3.atEnd())
+       {
+        donnees3 >> ligne3 ;
 
- if (th=="sport")
-     {  cout <<"chose the column you want to write in  C1: for nom sport| C5: for nom machine du sport | C2 :for nom femmes sportives quebecoises |C4 for nom spotifs tunisiens | C3 femme sportives francaises:"<<endl;
-       for (int i=0 ; i<5 ; i++)
-       { cout<<"-----------------"<<endl;
-         cout<<"what column you want to write in ? "<<endl;
+        if (( m3==ligne3)&&(m3[0])==L)
+          {
+            score=score+2  ;}
 
-         cin>>column;
-         if (column=="C1")
-         { cout<<"---nom sport---"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-             
-           for(int j=0; j<numplayer ; j++) 
-           {
-             cout<<"Give a word"<<endl;
-          
-             if (duration<maxtime)
-               {  
-                 cin>>kelma;
-                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
-                 double c=maxtime-duration;
-                 cout << "temps restant: "<<c<<endl ;
-                 if (c<0)
-                 {
-                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
-                   P.addscore(j);
-                 }
-                 else
-                 {
-                   if ((P.verif(kelma,"nom_sport.txt",P.get_L())==10))
-                   {
-                   P.addscore(j,2);
-                    }
-                   else 
-                   { 
-                   P.addscore(j);
-                   }
-                 }
-               }
-            }
-         }
-         if (column=="C2")
-         { cout<<"---nom femme sportives québéquoises---"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-             
-           for(int j=0; j<numplayer ; j++) 
-           {
-             cout<<"Give a word"<<endl;
-          
-             if (duration<maxtime)
-               {  
-                 cin>>kelma;
-                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
-                 double c=maxtime-duration;
-                 cout << "temps restant: "<<c<<endl ;
-                 if (c<0)
-                 {
-                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
-                   P.addscore(j);
-                 }
-                 else
-                 {
-                   if ((P.verif(kelma,"nom_femmes_sportives_québécoises.txt",P.get_L())==10))
-                   {
-                   P.addscore(j,2);
-                    }
-                   else 
-                   { 
-                   P.addscore(j);
-                   }
-                 }
-               }
-            }
-         }
-         if (column=="C3")
-         { cout<<"---nom femmes sportives françaises---"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-             
-           for(int j=0; j<numplayer ; j++) 
-           {
-             cout<<"Give a word"<<endl;
-          
-             if (duration<maxtime)
-               {  
-                 cin>>kelma;
-                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
-                 double c=maxtime-duration;
-                 cout << "temps restant: "<<c<<endl ;
-                 if (c<0)
-                 {
-                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
-                   P.addscore(j);
-                 }
-                 else
-                 {
-                   if ((P.verif(kelma,"nom_femmes_sportives_française.txt.txt",P.get_L())==10))
-                   {
-                   P.addscore(j,2);
-                    }
-                   else 
-                   { 
-                   P.addscore(j);
-                   }
-                 }
-               }
-            }
-         }
-         if (column=="C4")
-         { cout<<"---nom spotifs tunisiens---"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-             
-           for(int j=0; j<numplayer ; j++) 
-           {
-             cout<<"Give a word"<<endl;
-          
-             if (duration<maxtime)
-               {  
-                 cin>>kelma;
-                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
-                 double c=maxtime-duration;
-                 cout << "temps restant: "<<c<<endl ;
-                 if (c<0)
-                 {
-                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
-                   P.addscore(j);
-                 }
-                 else
-                 {
-                   if ((P.verif(kelma,"nom_sportifs_tunisiens.txt",P.get_L())==10))
-                   {
-                   P.addscore(j,2);
-                    }
-                   else 
-                   { 
-                   P.addscore(j);
-                   }
-                 }
-               }
-            }
-         }
-         if (column=="C5")
-         { cout<<"---machine sport---"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-             
-           for(int j=0; j<numplayer ; j++) 
-           {
-             cout<<"Give a word"<<endl;
-          
-             if (duration<maxtime)
-               {  
-                 cin>>kelma;
-                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
-                 double c=maxtime-duration;
-                 cout << "temps restant: "<<c<<endl ;
-                 if (c<0)
-                 {
-                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
-                   P.addscore(j);
-                 }
-                 else
-                 {
-                   if ((P.verif(kelma,"machine_sport.txt",P.get_L())==10))
-                   {
-                   P.addscore(j,2);
-                    }
-                   else 
-                   { 
-                   P.addscore(j);
-                   }
-                 }
-               }
-            }
-         }
+       else
+           { score=score+0  ;}
+     file3.close() ;
+    }
      }
-    }
-  }
-  
-    cout<<"WE WILL REVEAL THE SCORES !! :"<<endl;
-     P.InsertMap();
-     P.winner();
-     cout<<endl;
-     cout<<"-------------------------------"<<endl;
-     cout<<"THANK YOU FOR PLAYING OUR GAME "<<endl;
-     cout<<"-------------------------------"<<endl;
-     cout<<"! INFO : "<<endl;
-     cout<<"The objective of the BAC GAME is to rely on the creativity of the players to solve the problems without imposing any operating mode"<<endl;
-     cout<<endl;
-     cout<<"SEE YOU AGAIN !!!!!"<<endl;
-     cout<<" \n  "<<endl;
-  return 0;
+    QString m4 = ui->lineEdit_4->text();
+    QFile file4("C:/Users/21694/Documents/jeu1/Prizes.txt");
+    if (!file4.open(QIODevice::ReadOnly | QIODevice::Text))
+      { QMessageBox::warning(this,"title","file not open" );
+      }
+    else
+    {
 
-     
+
+      QTextStream donnees4(&file4) ;
+      QString ligne4;
+      while(! donnees4.atEnd())
+      {
+       donnees4 >> ligne4 ;
+
+        if (( m4==ligne4)&& (m4[0]==L))
+          {
+            score=score+2  ;}
+
+       else
+           { score=score+0  ;}
+     file4.close() ;
+      }
+    }
+    if ((m1=="")||(m2=="")||(m3=="")||(m4=="")||(L==""))
+
+      {QMessageBox::information(this,"cinema","Veuillez remplir tous les champs !!! ");}
+
+    else
+       {
+    if (score >=4)
+    {
+       QMessageBox::information(this,"GAGANT AVEC SCORE",QString::number(score) );
+       mwinner = new winner();
+       mwinner->show();
+    }
+
+    else
+      {
+
+        mloser = new loser();
+        mloser->show();
+
+
+
+      }
+
+
+       }
 }
+
+
+
+
+
+
