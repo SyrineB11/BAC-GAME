@@ -1,5 +1,4 @@
 # BAC-GAME
-it's a brain game 
 #include<iostream>
 #include<fstream>
 #include<cstdlib>
@@ -14,15 +13,15 @@ using namespace std;
 class Game
 { private :
     int di;//niveau de difficultée
-   vector<string> name;
-   vector<int> score;
-   multimap<int,string> Total;
-    //int score[20];
-    int numplayer;
-    string theme ;
+   vector<string> name;// tableau dynamique de nom
+   vector<int> score;//tableau dynamique de score
+   multimap<int,string> Total; // une multimap formée par de clé int et de valeur string
+    
+    int numplayer;//nombre de joueurs
+    string theme ;//nom théme
     char L;
   public :
-    void InsertMap()
+    void InsertMap() //sert a donner le score de chaque joueurs
     {
       for (int i=0 ; i<numplayer ; i++)
       {
@@ -36,24 +35,24 @@ class Game
       }
     }
    
-    void winner()
+    void winner() //donne le "WINNER"
     {
-      multimap<int,string>::iterator it;
+      multimap<int,string>::iterator it; 
      
        it= Total.end();
      
                  vector<int>::iterator pos ;
-                 pos=max_element(score.begin(),score.end());
-                 int n=*pos;
+                 pos=max_element(score.begin(),score.end());// pointeur sur le meilleur score
+                 int n=*pos;//la valeur du meilleur score
                  cout<<"THE BEST SCORE IS  :"<< n <<endl ;
 
-                 int nb=count(score.begin(), score.end(),n) ;
+                 int nb=count(score.begin(), score.end(),n) ;// compter le nombre de joueurs qui ont le meme score et qui est équivalent au score maxi
                  if (nb==numplayer)
                    {
-                    cout<<"WE HAVE NO WINNER HERE !! THANK YOU FOR PLAYING !! YOU CAN PLAY AGAIN !! "<<endl ;
+                    cout<<"WE HAVE NO WINNER HERE !! THANK YOU FOR PLAYING !! YOU CAN PLAY AGAIN !! "<<endl ; //s'il y a plusieurs personnes qui ont le meme score maxi => pas de winner
                    }
-                  else if ((numplayer!=nb) )
-                   { int i=*pos;
+                  else if ((numplayer!=nb) &&(nb<=2))
+                   { 
                     for (int i=0 ; i<numplayer ; i++)
                     { if ( (score[i]==n ))
                      {
@@ -83,7 +82,7 @@ class Game
       score[i]=score[i]+P;
 
     }
-    char get_L()
+    char get_L() //retourne une lettre aléatoire (a utiliser dans le code)
     {
       const char alphabet[] = "BACDEFGHIJKLMNOPQRSTUVWXYZ";
       size_t indice;
@@ -93,7 +92,7 @@ class Game
       return L ;
     }
     
-    Game( int num , string nn ,int d)
+    Game( int num , string nn ,int d) // constructeur initialiser par number of players ,nom du theme choisi et le niveau de difficultée
     {
       
       di=d;
@@ -112,12 +111,12 @@ class Game
       }
     }
         ~Game();
-        int verif(string , string , char);
-        string get_theme() const
+        int verif(string , string , char); // methode verif verifie si un mot est correct et correspondant au champs choisi
+        string get_theme() const//theme
         {
           return theme ;
         }
-       int getnumplayer() const
+       int getnumplayer() const // numbr of players needed
        { 
         return numplayer;
        }
@@ -134,7 +133,7 @@ int Game::verif(string mot ,string nom_f,char c)
     string n;
     int ok=0;
     int k=0;
-    if (c!=L)
+    if ((c!=L)&&(mot[0]==c))
     {
       k=100;
     }
@@ -195,7 +194,7 @@ int main()
   cout<<"chose your difficulty level Hard : 1 (maxtime 5 for each answer)  or medium : 2 (maxtime 7 for each answer) or easy : 3 (maxtime 9 for each answer) "<<endl;
   cin>>dif;
   cout<<"---------------------------------------------------------------------------------------------------------------" <<endl;
-  Game P(n,th,dif); 
+  Game P(n,th,dif); // le jeu commance 
   cout<< "    ---------------------     "<<endl;
   cout<<"     WELCOME TO THE BAC GAME    "<<endl;
   cout<<"     ---------------------  "<<endl;
@@ -217,8 +216,9 @@ int main()
   cout<<"The first Lettre in the  entered words is Always Uppercase"<<endl;
 
   cout<<"Every right answer equals +2pts & each wrong equals 0pts"<<endl;
+   
   cout<<"LET'S BEGIN"<<endl;
-  char  L=P.get_L();
+  char  L=P.get_L(); // 1er lettre aléatoire
   cout<<"------------------"<<endl;
   cout<<"THE first lettre is  : "<<L<<endl;
   cout<<"------------------"<<endl;
@@ -233,7 +233,7 @@ int main()
          cin>>column;
          if (column=="C1")
          { cout<<"---pays afrique---"<<endl;
-           std::clock_t start;
+           std::clock_t start; // timer gestion de temps
            start = std::clock();
            double duration=0;
            niveaudiff(maxtime,dif);
@@ -245,12 +245,12 @@ int main()
              if (duration<maxtime)
                {  
                  cin>>kelma;
-                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC; // calcul la durée que le joueur a pris pour écrire ca réponse
                  double c=maxtime-duration;
-                 cout << "temps restant: "<<c<<endl ;
-                 if (c<0)
+                 cout << "temps restant: "<<c<<endl ; //temp qui le reste par rapport au durée de difficulté qu'il a choisi
+                 if (c<0) //a dépassé le temps
                  {
-                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ; //le mot entrée est pris comme faux
                    P.addscore(j);
                  }
                  else
@@ -500,8 +500,8 @@ int main()
                }
              }
           }
-         if (column=="C3")
-        {cout<<"---ACTRESS---"<<endl;
+          if (column=="C3")
+         {cout<<"---ACTRESS---"<<endl;
                      
            std::clock_t start;
            start = std::clock();
@@ -538,14 +538,15 @@ int main()
          }
           
          if (column=="C4")
-         {cout<<"---Prizes---"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-           for(int j=0;j<numplayer;j++)
-           {
-            cout<<"Give a word"<<endl;
+           { 
+              cout<<"---Prizes---"<<endl;
+              std::clock_t start;
+              start = std::clock();
+              double duration=0;
+              niveaudiff(maxtime,dif);
+             for(int j=0;j<numplayer;j++)
+             {
+                cout<<"Give a word"<<endl;
                 if (duration<maxtime)
                  {
                     cin>>kelma;
@@ -569,11 +570,11 @@ int main()
                       P.addscore(j);
                       }
                    }
-                }
+                 } 
+             }     
           }
-    }
-    
- }
+        } 
+   }
   
 
  if (th=="sport")
@@ -584,17 +585,17 @@ int main()
 
          cin>>column;
          if (column=="C1")
-         { cout<<"---nom sport---"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
+           {    cout<<"---nom sport---"<<endl;
+             std::clock_t start;
+             start = std::clock();
+             double duration=0;
+             niveaudiff(maxtime,dif);
              
-           for(int j=0; j<numplayer ; j++) 
-           {
-             cout<<"Give a word"<<endl;
+             for(int j=0; j<numplayer ; j++) 
+             {
+               cout<<"Give a word"<<endl;
           
-             if (duration<maxtime)
+               if (duration<maxtime)
                {  
                  cin>>kelma;
                  duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
@@ -617,10 +618,46 @@ int main()
                    }
                  }
                }
-            }
-         }
-         if (column=="C2")
-         { cout<<"---nom femme sportives québéquoises---"<<endl;
+             }
+           }
+           if (column=="C2")
+           { cout<<"---nom femme sportives québéquoises---"<<endl;
+             std::clock_t start;
+             start = std::clock();
+             double duration=0;
+              niveaudiff(maxtime,dif);
+             
+             for(int j=0; j<numplayer ; j++) 
+             {
+               cout<<"Give a word"<<endl;
+          
+               if (duration<maxtime)
+               {  
+                 cin>>kelma;
+                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+                 double c=maxtime-duration;
+                 cout << "temps restant: "<<c<<endl ;
+                 if (c<0)
+                 {
+                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
+                   P.addscore(j);
+                 }
+                 else
+                 {
+                   if ((P.verif(kelma,"qbc.txt",P.get_L())==10))
+                   {
+                   P.addscore(j,2);
+                    }
+                   else 
+                   { 
+                   P.addscore(j);
+                   }
+                 }
+               }
+             }
+           }
+           if (column=="C3")
+           { cout<<"---nom femmes sportives françaises---"<<endl;
            std::clock_t start;
            start = std::clock();
            double duration=0;
@@ -643,7 +680,7 @@ int main()
                  }
                  else
                  {
-                   if ((P.verif(kelma,"nom_femmes_sportives_québécoises.txt",P.get_L())==10))
+                   if ((P.verif(kelma,"franc.txt",P.get_L())==10))
                    {
                    P.addscore(j,2);
                     }
@@ -654,45 +691,9 @@ int main()
                  }
                }
             }
-         }
-         if (column=="C3")
-         { cout<<"---nom femmes sportives françaises---"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
-             
-           for(int j=0; j<numplayer ; j++) 
-           {
-             cout<<"Give a word"<<endl;
-          
-             if (duration<maxtime)
-               {  
-                 cin>>kelma;
-                 duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
-                 double c=maxtime-duration;
-                 cout << "temps restant: "<<c<<endl ;
-                 if (c<0)
-                 {
-                   cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
-                   P.addscore(j);
-                 }
-                 else
-                 {
-                   if ((P.verif(kelma,"nom_femmes_sportives_française.txt.txt",P.get_L())==10))
-                   {
-                   P.addscore(j,2);
-                    }
-                   else 
-                   { 
-                   P.addscore(j);
-                   }
-                 }
-               }
-            }
-         }
-         if (column=="C4")
-         { cout<<"---nom spotifs tunisiens---"<<endl;
+           }
+           if (column=="C4")
+           { cout<<"---nom spotifs tunisiens---"<<endl;
            std::clock_t start;
            start = std::clock();
            double duration=0;
@@ -726,19 +727,19 @@ int main()
                  }
                }
             }
-         }
-         if (column=="C5")
-         { cout<<"---machine sport---"<<endl;
-           std::clock_t start;
-           start = std::clock();
-           double duration=0;
-           niveaudiff(maxtime,dif);
+           }
+           if (column=="C5")
+           { cout<<"---machine sport---"<<endl;
+             std::clock_t start;
+             start = std::clock();
+             double duration=0;
+             niveaudiff(maxtime,dif);
              
-           for(int j=0; j<numplayer ; j++) 
-           {
-             cout<<"Give a word"<<endl;
+              for(int j=0; j<numplayer ; j++) 
+             {
+               cout<<"Give a word"<<endl;
           
-             if (duration<maxtime)
+               if (duration<maxtime)
                {  
                  cin>>kelma;
                  duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
@@ -761,12 +762,12 @@ int main()
                    }
                  }
                }
+              }
             }
-         }
+       }
      }
-    }
-  }
   
+     
     cout<<"WE WILL REVEAL THE SCORES !! :"<<endl;
      P.InsertMap();
      P.winner();
