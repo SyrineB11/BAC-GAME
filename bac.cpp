@@ -312,7 +312,7 @@ int main()
            niveaudiff(maxtime,dif);
              
            for(int j=0; j<numplayer ; j++) 
-           {
+           {duration=0;
              cout<<"Give a word"<<endl;
           
              if (duration<maxtime)
@@ -476,7 +476,7 @@ int main()
            { duration=0;
              cout<<"Give a word"<<endl;
              if (duration<maxtime)
-              {
+              {duration =0;
                  cin>>kelma;
                  duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
                  double c=maxtime-duration;
