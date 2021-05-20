@@ -313,7 +313,7 @@ int main()
            niveaudiff(maxtime,dif);
              
            for(int j=0; j<numplayer ; j++) 
-           {
+           { duration=0;
              cout<<"Give a word"<<endl;
           
              if (duration<maxtime)
