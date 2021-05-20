@@ -235,11 +235,11 @@ int main()
          { cout<<"---pays afrique---"<<endl;
            std::clock_t start; // timer gestion de temps
            start = std::clock();
-           double duration=0;
+           double duration;
            niveaudiff(maxtime,dif);
              
            for(int j=0; j<numplayer ; j++) 
-           {
+           { duration=0;
              cout<<"Give a word"<<endl;
           
              if (duration<maxtime)
@@ -252,6 +252,7 @@ int main()
                  {
                    cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ; //le mot entrée est pris comme faux
                    P.addscore(j);
+                   duration=0;
                  }
                  else
                  {
@@ -271,15 +272,15 @@ int main()
          { cout<<"---pays_amerique---"<<endl;
            std::clock_t start;
            start = std::clock();
-           double duration=0;
+           double duration;
            niveaudiff(maxtime,dif);
              
            for(int j=0; j<numplayer ; j++) 
-           {
+           { duration=0;
              cout<<"Give a word"<<endl;
           
-             if (duration<maxtime)
-               {  
+             if ((duration<maxtime)||(j!=numplayer))
+               { 
                  cin>>kelma;
                  duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
                  double c=maxtime-duration;
@@ -288,6 +289,7 @@ int main()
                  {
                    cout<<" time out !!!!!!! your answer won't be accepted ,sorry  !!!!! "<<endl ;
                    P.addscore(j);
+                   duration=0;
                  }
                  else
                  {
@@ -307,7 +309,7 @@ int main()
          { cout<<"---pays-asie---"<<endl;
            std::clock_t start;
            start = std::clock();
-           double duration=0;
+           double duration;
            niveaudiff(maxtime,dif);
              
            for(int j=0; j<numplayer ; j++) 
@@ -315,7 +317,7 @@ int main()
              cout<<"Give a word"<<endl;
           
              if (duration<maxtime)
-               {  
+               {  duration=0;
                  cin>>kelma;
                  duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
                  double c=maxtime-duration;
@@ -343,11 +345,11 @@ int main()
          { cout<<"---pays europe--"<<endl;
            std::clock_t start;
            start = std::clock();
-           double duration=0;
+           double duration;
            niveaudiff(maxtime,dif);
              
            for(int j=0; j<numplayer ; j++) 
-           {
+           {duration=0;
              cout<<"Give a word"<<endl;
           
              if (duration<maxtime)
@@ -379,11 +381,11 @@ int main()
          { cout<<"---pays oceanie---"<<endl;
            std::clock_t start;
            start = std::clock();
-           double duration=0;
+           double duration;
            niveaudiff(maxtime,dif);
              
            for(int j=0; j<numplayer ; j++) 
-           {
+           { duration=0;
              cout<<"Give a word"<<endl;
           
              if (duration<maxtime)
@@ -432,11 +434,11 @@ int main()
          { cout<<"---MOVIES---"<<endl;
            std::clock_t start;
            start = std::clock();
-           double duration=0;
+           double duration;
            niveaudiff(maxtime,dif);
              
            for(int j=0; j<numplayer ; j++) 
-           {
+           { duration=0;
              cout<<"Give a word"<<endl;
           
              if (duration<maxtime)
@@ -469,10 +471,10 @@ int main()
            
            std::clock_t start;
            start = std::clock();
-           double duration=0;
+           double duration;
            niveaudiff(maxtime,dif);
            for(int j=0;j<numplayer;j++)
-           {
+           { duration=0;
              cout<<"Give a word"<<endl;
              if (duration<maxtime)
               {
@@ -505,10 +507,10 @@ int main()
                      
            std::clock_t start;
            start = std::clock();
-           double duration=0;
+           double duration;
            niveaudiff(maxtime,dif);
            for(int j=0;j<numplayer;j++)
-            {
+            {duration=0;
               cout<<"Give a word"<<endl;
 
                  if (duration<maxtime)
@@ -542,10 +544,10 @@ int main()
               cout<<"---Prizes---"<<endl;
               std::clock_t start;
               start = std::clock();
-              double duration=0;
+              double duration;
               niveaudiff(maxtime,dif);
              for(int j=0;j<numplayer;j++)
-             {
+             { duration=0;
                 cout<<"Give a word"<<endl;
                 if (duration<maxtime)
                  {
@@ -585,14 +587,15 @@ int main()
 
          cin>>column;
          if (column=="C1")
-           {    cout<<"---nom sport---"<<endl;
+           { 
+               cout<<"---nom sport---"<<endl;
              std::clock_t start;
              start = std::clock();
-             double duration=0;
+             double duration;
              niveaudiff(maxtime,dif);
              
              for(int j=0; j<numplayer ; j++) 
-             {
+             { duration=0;
                cout<<"Give a word"<<endl;
           
                if (duration<maxtime)
@@ -624,11 +627,11 @@ int main()
            { cout<<"---nom femme sportives québéquoises---"<<endl;
              std::clock_t start;
              start = std::clock();
-             double duration=0;
+             double duration;
               niveaudiff(maxtime,dif);
              
              for(int j=0; j<numplayer ; j++) 
-             {
+             { duration=0;
                cout<<"Give a word"<<endl;
           
                if (duration<maxtime)
@@ -660,11 +663,11 @@ int main()
            { cout<<"---nom femmes sportives françaises---"<<endl;
            std::clock_t start;
            start = std::clock();
-           double duration=0;
+           double duration;
            niveaudiff(maxtime,dif);
              
            for(int j=0; j<numplayer ; j++) 
-           {
+           {  duration=0;
              cout<<"Give a word"<<endl;
           
              if (duration<maxtime)
@@ -696,11 +699,11 @@ int main()
            { cout<<"---nom spotifs tunisiens---"<<endl;
            std::clock_t start;
            start = std::clock();
-           double duration=0;
+           double duration;
            niveaudiff(maxtime,dif);
              
            for(int j=0; j<numplayer ; j++) 
-           {
+           { duration=0;
              cout<<"Give a word"<<endl;
           
              if (duration<maxtime)
@@ -732,11 +735,11 @@ int main()
            { cout<<"---machine sport---"<<endl;
              std::clock_t start;
              start = std::clock();
-             double duration=0;
+             double duration;
              niveaudiff(maxtime,dif);
              
               for(int j=0; j<numplayer ; j++) 
-             {
+             {  duration=0;
                cout<<"Give a word"<<endl;
           
                if (duration<maxtime)
