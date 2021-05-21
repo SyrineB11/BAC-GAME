@@ -1,55 +1,55 @@
-afrique de sud
-algerie
-angola
-benin
-botswana
-burkina faso
-burundi
-cameroun
-cap vert
-republique centrafricaine
-comores
-republique du congo
-cote d'ivoire
-djibouti
-egypte
-erythree
-eswatini
-ethiopie
-gabon
-gambie
-ghana
-guinee
-kenya
-lesotho
-liberia
-libya
-madagascar
-malawi
-mali
-maroc
-maurice
-mauritanie
-mozambique
-namibie
-niger
-nigeria
-ouganda
-rwanda
-senegal
-seychelles
-somalie
-soudan
-soudan du sud
-tanzanie
-tchad
-togo
-tunisie
-zambia
-zimbabew
-guinee equatoriale
-republique democratique ducongo
-guinee bissau
-guinee equatoriale
-lesotho
-sao tome et principe
+Afrique_de_sud
+Algerie
+Angola
+Benin
+Botswana
+Burkina_faso
+Burundi
+Cameroun
+Cap_vert
+Republique_centrafricaine
+Comores
+Republique_du_congo
+Cote_d'ivoire
+Djibouti
+Egypte
+Erythree
+Eswatini
+Ethiopie
+Gabon
+Gambie
+Ghana
+Guinee
+Kenya
+Lesotho
+Liberia
+Libya
+Madagascar
+Malawi
+Mali
+Maroc
+Maurice
+Mauritanie
+Mozambique
+Namibie
+Niger
+Nigeria
+Ouganda
+Rwanda
+Senegal
+Seychelles
+Somalie
+Soudan
+Soudan_du_sud
+Tanzanie
+Tchad
+Togo
+Tunisie
+Zambia
+Zimbabew
+Guinee_equatoriale
+Republique_democratique_ducongo
+Guinee_bissau
+Guinee_equatoriale
+Lesotho
+Sao_tome_et_principe
