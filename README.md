@@ -216,6 +216,10 @@ int main()
   cout<<"The first Lettre in the  entered words is Always Uppercase"<<endl;
 
   cout<<"Every right answer equals +2pts & each wrong equals 0pts"<<endl;
+                          
+  cout<<" The space between the words must be replaced by _ "<< endl;
+  
+  cout<< "The first lettre is uper case always "<<endl;
    
   cout<<"LET'S BEGIN"<<endl;
   char  L=P.get_L(); // 1er lettre aléatoire
