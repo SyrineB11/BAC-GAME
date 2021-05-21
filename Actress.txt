@@ -1,113 +1,110 @@
-A-
-Audrey Hepburn
+Audrey_Hepburn
 Anémone
 Arletty
 Anicée
-Annir Cordy
-Audie Murphy
-Anissa Jones
+Annir_Cordy
+Audie_Murphy
+Anissa_Jones
 
-B-
-Barbara Bel Geddes
-Barbara Cook
-Barbara Hale
-Barry Dennen
-Barbara Windsor
-Beau Kazer 
-Bill Hunter
-C-
-Martin Croker
-Cameron Boyce
+Barbara_Bel_Geddes
+Barbara_Cook
+Barbara_Hale
+Barry_Dennen
+Barbara_Windsor
+Beau_Kazer 
+Bill_Hunter
+
+Martin_Croker
+Cameron_Boyce
 Capucine
-Carl Reiner 
-Carlo Lizzani
-Carlo Nell
-Carmen Argenziano
-Carol Ann Susi
-D-
-Denise Grey
+Carl_Reiner 
+Carlo_Lizzani
+Carlo_Nell
+Carmen_Argenziano
+Carol_Ann_Susi
+
+Denise_Grey
 Dalida
 Diane
-Dolores O'Riordan
-Denise Glaser
-Delphine Seyrig
-Danielle Mitterand
-Diane de poitiers 
-Danielle Messia
-E-
-Elizabeth Montgomery
-Erik Colin 
-Edith Scob
-Edith Scob
-Elsa Scob
-F-
-Françoise Fabian
+Dolores_O'Riordan
+Denise_Glaser
+Delphine_Seyrig
+Danielle_Mitterand
+Diane_de_poitiers 
+Danielle_Messia
+
+Elizabeth_Montgomery
+Erik_Colin 
+Edith_Scob
+Elsa_Scob
+
+Françoise_Fabian
 Falahee
-Falk Peter
-Fanning Elle
-Farmiga Vera
-G-
-Gréco Juliette
-Greene Ashley
-H-
-Heath ledger
-I-
-Ian Hendry
-J-
-Jeanne Balibar
+Falk_Peter
+Fanning_Elle
+Farmiga_Vera
 
-Q-
+Gréco_Juliette
+Greene_Ashley
+
+Heath_ledger
+
+Ian_Hendry
+
+Jeanne_Balibar
+
+
 Quareen
-L-
-Lawrence Jennifer
-M-
-Miley cirus
-Madeleine labeau
-N-
-Nathalie Delon
-O-
-Odette Joyeux
-Odette Laure
-P-
-Palle Huld
-Pamela Gidley
-Paolo Ferrari
 
-R-
+Lawrence_Jennifer
+
+Miley_cirus
+Madeleine_labeau
+
+Nathalie_Delon
+
+Odette_Joyeux
+Odette_Laure
+
+Palle_Huld
+Pamela_Gidley
+Paolo_Ferrari
+
+
 Rosée
-Romy schneider
-Rika Zarai
-Rosa Parks
-Rose Laurens
-S-
-Sabine Sinjen
-Sacha guitry
-sam lloyd
-T-
-Tab Hunter
-Tanya Roberts
-U-
-Ugo Tognazzi
-Ulla Sallert
-Ulli Lommel
-V-
-Valentina Cortese
-Valerie Harper 
-Van Williams
-Valerie Long
+Romy_schneider
+Rika_Zarai
+Rosa_Parks
+Rose_Laurens
 
-W-
-Whitney Houston
-Warda al jazairia
+Sabine_Sinjen
+Sacha_guitry
+sam_lloyd
+
+Tab_Hunter
+Tanya_Roberts
+
+Ugo_Tognazzi
+Ulla_Sallert
+Ulli_Lommel
+
+Valentina_Cortese
+Valerie_Harper 
+Van_Williams
+Valerie_Long
+
+
+Whitney_Houston
+Warda_al_jazairia
 Winnie Mandela
 
-X-
 
-Y-
+
+
 Yara 
 Yonna
 Yanni
-Z-
+
 Zindia
-Zoe lund
-zizi Jeanmaire
+Zoe_lund
+zizi_Jeanmaire
