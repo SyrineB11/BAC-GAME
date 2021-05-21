@@ -1,16 +1,16 @@
-australie
-iles cook
-fidji
-kiribati
-iles marshall
-micronesie
-nauru
-niue
-nouvelle zelande
-palaos
-papouasie nouvelle guinee
-salomon
-samoa
-tonga
-tuvalu
-vabuatu
+Australie
+Iles_cook
+Fidji
+Kiribati
+Iles_marshall
+Micronesie
+Nauru
+Niue
+Nouvelle_zelande
+Palaos
+Papouasie_nouvelle_guinee
+Salomon
+Samoa
+Tonga
+Tuvalu
+Vabuatu
