@@ -1,148 +1,136 @@
-A-
-Al Pacino
-Aaron Carter
-Aaron Ashmore
-Aaron Abrams
-Aaron Blaise
+Al_Pacino
+Aaron_Carter
+Aaron_Ashmore
+Aaron_Abrams
+Aaron_Blaise
 Aaliyah
-Aarif Rahma
-Abdellatif kechiche
-Abderrahmane Sissako
-Abdul Goznobi
-Abel Ferrara
-Abhay Deol
-Abhi sinha
-Anthony Hopkins
-B-
-Billy Bob Thornton
-Ben affleck
-Bradley Cooper
-Brad pitt
-Ben Stiller
-Ben Foster.Actor
+Aarif_Rahma
+Abdellatif_kechiche
+Abderrahmane_Sissako
+Abdul_Goznobi
+Abel_Ferrara
+Abhay_Deol
+Abhi_sinha
+Anthony_Hopkins
+
+Billy_Bob_Thornton
+Ben_affleck
+Bradley_Cooper
+Brad_pitt
+Ben_Stiller
+Ben_Foster
 Beyoncé 
-C-
-Clint Eastwood
-Christopher Walken
-Chazz Palminteri
-Colin Firth
-Colin Hanks
-Chuck Norris
-Crispin Glover
-Christian Slater.Actor
-D-
-Danny DeVito
-Damon Matt
-Delon Aladdin
-Douglas Kirk
-E-
+
+Clint_Eastwood
+Christopher_Walken
+Chazz_Palminteri
+Colin_Firth
+Colin_Hanks
+Chuck_Norris
+Crispin_Glover
+Christian_Slater
+
+Danny_DeVito
+Damon_Matt
+Delon_Aladdin
+Douglas_Kirk
+
 Eminem
 Emilio
-Evans Christian
-Electra Carmen
+Evans_Christian
+Electra_Carmen
 Eckhart
-Elordi Jacob
-Elfman Jenna
-Eisenberg Jesse
-F-
-Faouzia
-G-
-Gibson Male
-Gershon Gina
-Greer Judy
-jean Gabin
-H-
-Hardy Oliver
-Hallyday Johnny
-Hanks Tom
-Hill Terence
-Hathaway Anne
+Elordi_Jacob
+Elfman_Jenna
+Eisenberg_Jesse
 
-I-
-Ivanka Trump
-Isla Fisher
+Faouzia
+
+Gibson_Male
+Gershon_Gina
+Greer_Judy
+jean_Gabin
+
+Hardy_Oliver
+Hallyday_Johnny
+Hanks_Tom
+Hill_Terence
+Hathaway_Anne
+
+
+Ivanka_Trump
+Isla_Fisher
 Indila
-J-
-Johnny Depp
-John Travolta
-Jake Paul
-Jared Leto
-John Krasinski
-K-
-karen wizar
-L-
-Lana del ray
-M-
+
+Johnny_Depp
+John_Travolta
+Jake_Paul
+Jared_Leto
+John_Krasinski
+
+karen_wiza
+
+Lana_del_ray
+
 Moories
 
-N-
-Nicolas Carnage
-Noah Centineo
-Nick Cannon
-Nicholas Hoult
-O-
+
+Nicolas_Carnage
+Noah_Centineo
+Nick_Cannon
+Nicholas_Hoult
+
 O.J.Simpson
-Omar Sky
-Owen Wilson
-Oscar issac
-Oliver Reed 
-Oliver Reed
-
-
-P-
+Omar_Sky
+Owen_Wilson
+Oscar_issac
+Oliver_Reed 
 Pacino
-Q-
-Quaid Dennis
-Suinn Anthony
-Qi Shu
-R-
-Ralph Macchio
-Ryan Reynolds
-Robin Williams
-Rami Malek
-Rajiv Kapoor
-S-
-Steve Zahn
-Steve Carell
-Steven Seagal
-Stephen Dorff
 
-T-
-Travolta John
-Trejo Danny
-U-
-Uday Chopra
-Utkarsh Ambudkar
-Uttam kumar
-Uday kiran
-Upen Patel
-V-
+Quaid_Dennis
+Suinn_Anthony
+Qi_Shu
+Ralph_Macchio
+Ryan_Reynolds
+Robin_Williams
+Rami_Malek
+Rajiv_Kapoor
 
-Vin Diesel
-Viggo Mortensen
-Varun Dhawan
-Vince Vaughn
-Val kilmer
-W-
-William Zabka
-Will smith
-will ferrell
-woody allen
-william shatner
-wentworth Miller
+Steve_Zahn
+Steve_Carell
+Steven_Seagal
+Stephen_Dorff
 
-X-
-Xavier Samuel
-Xian LimitedXaviera Hollander
-Xu Jiao
-Y-
+
+Travolta_John
+Trejo_Danny
+
+Uday_Chopra
+Utkarsh_Ambudkar
+Uttam_kumar
+Uday_kiran
+Upen_Patel
+
+Vin_Diesel
+Viggo_Mortensen
+Varun_Dhawan
+Vince_Vaughn
+Val_kilmer
+
+William_Zabka
+Will_smith
+will_ferrell
+woody_allen
+william_shatner
+wentworth_Miller
+Xavier_Samuel
+Xian _LimitedXaviera_Hollander
+Xu_Jiao
 Yungblud
-Yoko Ono
-Yul Brynner
-
-Z-
-Zac efron
-Zach Braff
-Zachary Levi 
-Zach Woods
-Zach Gilford
+Yoko_Ono
+Yul_Brynner
+Zac_efron
+Zach_Braff
+Zachar_ Levi 
+Zach_Woods
+Zach_Gilford
