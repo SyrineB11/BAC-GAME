@@ -6,6 +6,7 @@
 #include<iomanip>
 #include <conio.h>
 #include<cstring>
+#include<string>
 #include<map>
 #include<vector>
 #include <algorithm>
@@ -133,7 +134,7 @@ int Game::verif(string mot ,string nom_f,char c)
     string n;
     int ok=0;
     int k=0;
-    if (c!=L)
+    if ( (mot.at(0)!=c))
     {
       k=100;
     }
