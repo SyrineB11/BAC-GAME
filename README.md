@@ -133,7 +133,7 @@ int Game::verif(string mot ,string nom_f,char c)
     string n;
     int ok=0;
     int k=0;
-    if (mot[0]!=c)
+    if (c!=L)
     {
       k=100;
     }
