@@ -147,7 +147,7 @@ int Game::verif(string mot ,string nom_f,char c)
       else
       {
         while (entree >> n)
-        if ((n==mot) &&(mot.at(0)==c))
+        if ((n==mot) )
         {
           k=1;
         }
