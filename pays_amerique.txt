@@ -1,34 +1,37 @@
-antigua et barbuda
-argentine
-bahamas
-barbade
-belize
-bolivie
-bresil
-canada
-chili
-colombia
-costa rica
-cuba
-republique dominicaine
-dominique
-equateur
-etats unis
-grenade
-guatemala
-guyana
-haiti
-honduras
-jamaique
-mexique
-nicaragua
-panama
-paraguay
-perou
-saint kitts et nevis
-saint vincent et les grenadines
-sainte lucie
-salvador
-suriname
-trinite et tobago
-uruguay
+Antigua 
+Barbuda
+Argentine
+Bahamas
+Barbade
+Belize
+Bolivie
+Bresil
+Canada
+Chili
+Colombia
+Costa_rica
+Cuba
+Republique_dominicaine
+Dominique
+Equateur
+Etats_unis
+Grenade
+Guatemala
+Guyana
+Haiti
+Honduras
+Jamaique
+Mexique
+Nicaragua
+Panama
+Paraguay
+Perou
+Saint_kitts_et_nevis
+Saint_vincent
+Grenadines
+Sainte_lucie
+Salvador
+Suriname
+Trinite
+Tobago
+Uruguay
