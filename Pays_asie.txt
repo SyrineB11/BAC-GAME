@@ -1,48 +1,48 @@
-afghanistan
-arabie saoudite
-armenie
-azerbaidjan
-bahrein
-bangladesh
-bhoutan
-birmanie
-brunei
-cambodge
-chine
-coree du nord
-coree du sud
-emirats arabes unis
-georgie
-inde
-indonesie
-irak
-iran
-irak
-israel
-japon
-jordanie
-kazakhstan
-kirghizistan
-koweit
-laos
-liban
-malaisie
-maldives
-mongolie
-nepal
-oman
-ouzbekistan
-palestine
-pakistan
-philippines
-qatar
-singapour
-sri lanka
-syrie
-tadjikistan
-thailande
-timor oriental
-turkmenistan
-turquie
-yemen
-viet nam
+Afghanistan
+Arabie_saoudite
+Armenie
+Azerbaidjan
+Bahrein
+Bangladesh
+Bhoutan
+Birmanie
+Brunei
+Cambodge
+Chine
+Coree_du_nord
+Coree_du_sud
+Emirats_arabes€unis
+Georgie
+Inde
+Indonesie
+Irak
+Iran
+Irak
+
+Japon
+Jordanie
+Kazakhstan
+Kirghizistan
+Koweit
+Laos
+Liban
+Malaisie
+Maldives
+Mongolie
+Nepal
+Oman
+Ouzbekistan
+Palestine
+Pakistan
+Philippines
+Qatar
+Singapour
+Sri lanka
+Syrie
+Tadjikistan
+Thailande
+Timor_oriental
+Turkmenistan
+Turquie
+Yemen
+Viet_nam
