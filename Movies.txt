@@ -1,294 +1,251 @@
-A-
 Alive
-A Witches' Ball
-A Whisker Away
-A Walk to Remember
+A_Witches'_Ball
+A_Whisker_Away
+A_Walk_to€Remember
 Alexander
-Ali & Alia
-Alice junior
-Alien Xmas
-Ali BABA 
+Ali_&_Alia
+Alice_junior
+Alien_Xmas
+Ali€BABA 
 AnneFrank
-17 Again
-A 2nd Chance
-A Bad Moms Christmas
-A Champion Heart
-A Cinderella Story: Christmas Wish
-A Babysitter/'s Guide to Monster Hunting
-Ace in the Hole
-Ace Ventura: Pet Detective
-An Actor's Revenge
+17_Again
+A_2nd_Chance
+A_Bad_Moms_Christmas
+A_Champion_Heart
+A_Cinderella_Story
+A_Babysitter/'s_Guide_to_Monster_Hunting
+Ace_in_the_Hole
+Ace_Ventura
+An_Actor's_Revenge
 Addiction
 Alice
-All About My Mother
+All_About_My_Mother
 Avengers
 Avatar
 Aladdin
-Ad Astra
-After Hours
+Ad_Astra
+After_Hours
 Alien
 Angela
 Anabelle
-Alone in the woods
-American Haunting
-Arizona summer
-American Psycho 
-Artificial Intelligence
-Any Given Sunday
-Army of Darkness  
-A Flying Jatt
-A Trip to Mars
-Abattoir 5
+Alone_in_the_woods
+American_Haunting
+Arizona_summer
+American_Psycho 
+Artificial_Intelligence
+Any_Given_Sunday
+Army_of_Darkness  
+A_Flying_Jatt
+A_Trip_to_Mars
+Abattoir_5
 Abyss
-Ad Astra
+Ad_Astra
 Adaline
-ADN Alien
+ADN_Alien
 Absolon
 Advantageous
 Aelita
 Argo
-American History X
-A Clockwork Orange
-Amores Perros
-A Nightmare on  Elm Street
-American Hustle
+American_History_X
+A Clockwork_Orange
+Amores_Perros
+A Nightmare_on _Elm_Street
+American_Hustle
 Arrival
 Amélie
-Annie Hall
-Apocalypse Now
-B-
-Big Bang Theory
-Bad Day at Black Rock
+Annie_Hall
+Apocalypse_Now
+
+Big_Bang_Theory
+Bad_Day at_Black_Rock
 Back to the Future
 Batman
-Battle Royale
-Battleship Potemkin
-Before Sunrise
-Being There
-Belle de Jour
+Battle_Royale
+Battleship_Potemkin
+Before_Sunrise
+Being_There
+Belle_de_Jour
 Ben-Hur
-Belleville Rendez-vous
-Betty Blue
-Beauty & the beast
-Bicycle Thieves
-Black Cat, White Cat
-Bye Bye Birdie
-Bloody merder
-Barton Fink
+Belleville_Rendez-vous
+Betty_Blue
+Beauty_&_the beast
+Bicycle_Thieves
+Bye_Bye_Birdie
+Bloody_merder
+Barton_Fink
 Bloodmoon
-Burn After Reading 
+Burn_After_Reading 
 Beethoven
 Barbie-movies
-Blue Demon
-Black Widow
-Battle: Los Angeles 2
-Bad Trip 
+Blue_Demon
+Black_Window
+Battle:Los_Angeles_2
+Bad_Trip 
 Bloodthirsty
 Boogie
-Born A Champion 
-Beneath A Scarlet Sky
-Bad Guys
+Born_A_Champion 
+Beneath_A_Scarlet Sky
+Bad_Guys
 Beate
 Bliss
 Baby boss
 Becky 
-Body Brokers 
+Body_Brokers 
 Blackbird 
-Born a Crime
-Bad Therapy
-Below Her Mouth
+Born_a_Crime
+Bad_Therapy
+Below_Her_Mouth
 Belfast
-Black Beauty
-Blithe Spirit 
-Blumhouse's Truth Or Dare
-Bad Boys for Life
-Bigfoot Family
-Buddy Games
-Buffalo Boys
-Blood Brother
+Black_Beauty
+Blithe_Spirit 
+Blumhouse's_Truth_Or_Dare
+Bad_Boys_for_Life
+Bigfoot_Family
+Buddy_Games
+Buffalo_Boys
+Blood_Brother
 Bloodshot
-Bill & Ted Face The Music
-Blue Story
-Birds of prey
-Brahms: The Boy II
+Bill_&_Ted_Face_The_Music
+Blue_Story
+Birds_of_prey
+Brahms:_The_Boy_II
 Bumblebee 
-Battlefield 2025
+Battlefield_2025
 Blended
-Blended
-Beautiful Jim Key
-Before I Fall 
+
+Beautiful_Jim_Key
+Before_I_Fall 
 Biker Boyz 
-C-
-Clear the Skies 
+
+Clear_the _skies 
 Call
-Cloud Atlas
+Cloud_Atlas
 Cloverfield
-Cabin fever
+Cabin_fever
 Calvaire
 Call Northside 777
 Clown House
 
-Cabin Fever (2002) *
-Clear the Skies *
-The Cabin in the Woods *
-Clerks *
-The Cable Guy *
-Clerks II *
-Caché ~
+The_Cabin_in_the_Woods 
+Clerks 
+The_Cable_Guy 
+Clerks
+Caché 
 Click
-Cactus *
-The Client List *
-Cadet Kelly *
+Cactus 
+The Client List 
+Cadet Kelly 
 Clifford
-Café de flore *
-The Clock *
-Café Society *
-Closed Circuit *
-The Caiman ~
-Closer *
-Cairo Time ~
-The Closet *
-Cake	Close Your Eyes *
-Cake (2014) ~
-Closing the Ring ~
-Calendar Girls *
-Closure *
-Calibre *
-Cloud 9 *
-The Call (2013) *
-The Cloverfield Paradox *
-Calvary *
-Club Dread *
-The Camera Obscura ~
-Clueless *
-The Campaign *
-Coach *
-Campfire Tales	Coasting *
-Camp Rock *
-The Cobbler ~
-Camp Rock 2: The Final Jam *
-Cobra *
-Candy (2006) ~	
-Coco *
-Candyman (1992) *
-The Code *
-Candyman (2010) *
-Code 46 ~
-Cannibal (2013) ~
-Coherence *
-Can We Take a Joke? *
-Coin Toss *
-Capitalism: A Love Story *
-Cold as Summer ~
-Capote ~
-Cold Comes the Night *
-Caprice *
+Café de flore 
+The Clock 
+Café Society 
+Closed Circuit 
+The Caiman 
+Closer 
+Cairo Time 
+The Closet 
+Cake	Close Your Eyes 
+
+Closing the Ring 
+Calendar Girls 
+Closure 
+Calibre 
+Cloud_9 
+The Call (2013) 
+The Cloverfield Paradox 
+Calvary 
+Club Dread 
+The Camera Obscura 
+Clueless 
+The Campaign 
+Coach 
+Camp Rock 
+The Cobbler 
+Camp Rock 2: The Final Jam 
+Cobra 
+Candy (2006) 	
+Coco 
+Candyman (1992) 
+The Code 
+Candyman (2010) 
+Code 46 
+Cannibal (2013) 
+Coherence 
+Can We Take a Joke? 
+Coin Toss 
+Capitalism: A Love Story 
+Cold as Summer 
+Capote 
+Cold Comes the Night 
+Caprice 
 Cold Creek Manor
-Captain Abu Raed *
-Cold December *
-Captain America: Civil War *
-Cold Mountain *
-Captain America: The First Avenger *	
-Cold Sweat (2010) *
-Captain America: The Winter Soldier *	
-Cold War ~
-Captain Mike Across America ~	
-Cole ~
-Captain Phillips *	
-Colette ~
-The Captive (2014) *	
-Collaborator *
-Captured *
-Collateral *
-The Car *
-Collateral Beauty *
-Caramel ~	
-The Collector (2009) *
-Carandiru ~
-College *
-Cardinals ~
-College Road Trip *
-Careful What You Wish For *
-Colombiana *
-Carjacked *	
-The Colony *
-Carlito's Way: Rise to Power	The Color of the Chameleon ~
-Carnage *
-Color of the Ocean ~
-Carol *	
-Colossal ~
-Carrie (2002) *	
-Columbus Day *
-Carrie (2013) *	
-Combien tu m'aimes? ~
-Carriers *
-Come and Get It *
-Cars *
-The Comebacks *
-Cars 2 *
-Comeback Season *
-Cars 3 *
-The Comedians of Comedy *
-The Carter Effect ~	
+Captain Abu Raed 
+Cold_December
+Captain_America: Civil War 
+Cold_Mountain 
+Captain_America
+Cold_Sweat (2010) 
+	
+Cold_War 
+Captain_Mik_Across_America 	
+Cole 
+Captain_Phillips 	
+Colette 
+The_Captive (2014) 
+Collaborator 
+Captured 
+Collateral
+The_Car 
+Collateral_Beauty 
+Caramel 
+The_Collector 
+Carandiru 
+College 
+Cardinals 
+College_Road_Trip 
+Careful_What_You_Wish_For 
+Colombiana 
+Carjacked 
+The Colony
+Carlito's_Way:Rise_to_Power_The Color_of_the_Chameleon 
+Carnage 
+Color_of_the_Ocean 
+Carol 
+Colossal 
+Carrie (2002) 	
+Columbus Day 
+Carrie (2013) 	
+Combien_tu_m'aimes? 
+Carriers 
+Come_and_Get_It 
+Cars 
+The_Comebacks 
+Cars_2 
+Comeback_Season 
+Cars_3 
+The_Comedians_of_Comedy
+The_Carter_Effect
 Comedian
-Cas & Dylan *	
-The Comedian *
-Casa de mi Padre *	
-Come Early Morning *
-Case 39 *	
-Comic Book: The Movie
-A Case of You *	
-Comic-Con Episode IV: A Fan's Hope ~
-Cashback ~	
-Coming to America *
-Casino Jack ~	
-Commando *
-Casino Royale (2006) *	
-The Commuter *
-Cassandra's Dream ~
-The Companion *
-Casting By *
-The Company *
-Castle in the Sky *
-The Company You Keep ~
-Casualties of War *
-Compliance *
-Catacombs *	
-Con Air *
-Catch and Release *
-Conan O'Brien Can't Stop *
-Catch Me If You Can *
-The Condemned *
-Catch That Kid *
-Conduct Unbecoming *
-The Catechism Cataclysm *	
-Confessions of an American Girl
-Catfight ~	
-Confessions of a Dangerous Mind *
-Catfish *	
-Confessions of a Shopaholic *
-The Cat O'Nine Tails 
-Confessions of a Teenage Drama Queen
-Cat People	
-Confetti 
-The Cat Returns 	
-Confidence 
-Cats and Dogs	Confusions of an Unmarried Couple 
-Cats & Dogs: The Revenge 	
-Congorama 
-The Cat's Meow 	
-The Conjuring 
-Cattle Call 	
-Conjuring 2 *
- Cat Vanishes 
-Connors' War 
-Catwoman	
-Conspiracy Theory 
-Cave 
-The Conspirator
-Cave of Forgotten Dreams 	
-Constantine 
-Cavite ~	
+Cas_&_Dylan 
+
+Cashback 	
+Coming_to_America 
+Casino_Jack 
+Commando 
+Casino_Royale	
+The_Commuter 
+Cassandra's_Dream 
+Companion 
+Casting_By 
+Company 
+Castle_in_the_Sky 
+The Company You Keep 
+Casualties of War 
+Compliance
+Catacombs
+Con Air 
+Catch_and_Release 
+Cavite 	
 Contagion 
 Cedar Rapids 
 Contraband 
@@ -309,16 +266,16 @@ Conviction
 Chacun sa nuit 	
 Cool Hand Luke 
 Chain Letter 	
-Cool It 
-Chain of Command	
-Cool Runnings 
-Chain Reaction 	
+Cool_It 
+Chain_of_Command	
+Cool_Runnings 
+Chain_Reaction 	
 Cop 
-The Champagne Safari 	
+The_Champagne_Safari 	
 Copacabana 
-The Changeling	Cop Car 
+The_Changeling_Cop_Car 
 The Change-Up 	
-Cop Out 
+Cop_Out 
 Chaos 
 Copycat 
 Chaos Theory 	
@@ -328,25 +285,18 @@ Coraline
 Chappie 
 The Core 
 Charlie	Corky Romano
-Charlie and the Chocolate Factory 	
-Corporate Affairs 
-Charlie Bartlett 	
-The Corpse of Anna Fritz 
-Charlie Chan in the Secret Service 	
-Cosmopolis 
-Charlie's Angels: Full Throttle 	
-The Cottage 
-Charlie St. Cloud 	
-The Counselor 
-Charlie Wilson's War 	
-The Counterfeiters 
+Charlie_and_the_Chocolate_Factory 	
+Corporate_Affairs 
+Charlie_Bartlett 	
+ 	
+The_Counterfeiters 
 Charly 	
-Countess Dracula
-Chasing Ghosts	The Country Bears
-Chasing Liberty	Country Strong 
-Chasing Mavericks 	
-Couples Retreat 
-Chasing Sleep	The Courtyard 
+Countess_Dracula
+Chasing_Ghosts_The_Country_Bears
+Chasing_Liberty	Country Strong 
+Chasing_Mavericks 	
+Couples_Retreat 
+Chasing_Sleep_Courtyard 
 Chastity 	
 The Cove 
 Che 	
@@ -354,26 +304,25 @@ The Covenant
 Cheaper by the Dozen 	
 Cow Belles 
 Cheap Thrills 
-Cowboys & Aliens 
-Cheaters	Coyote Ugly 
+Cowboys_&_Aliens 
+Cheater_Coyote Ugly 
 Cheats	Un crabe dans la tete
 Checking Out (1989) 
 Crackerjack 
 Checkpoint 	
 Crack House 
 Cheeky 	
-Cradle 2 the Grave 
-The Cheetah Girls 	
+
+Cheetah_Girls 	
 Crank 
-The Cheetah Girls 2 
-Crank: High Voltage 
+
 Clara 
 Curve 
 Clara et moi (Clara and I) 
 Custody 
-Clash of the Titans (1981) 	
+Clash_of_the_Titans  	
 Cut
-Clash of the Titans (2010) 	
+
 Cut Bank 
 The Class 	
 The Cutter 
@@ -385,467 +334,448 @@ Cleaner
 Cypher 
 Clear History 
 Cyrus 
- Clearing	Cyrus: Mind of A Serial Killer
-D-
-Dragon Hunter
+
+Dragon_Hunter
 Dimond
-Dr House
-Daddy and Them	Despicable Me 2 
-Daddy Day Care	Despicable M3 
-Daddy's Home 
+Dr_House
+Daddy_and_Them_Despicable Me 2 
+Daddy_Day_Care_Despicable M3 
+Daddy's_Home 
 Detachment 
-Daddy's Home 2 
-Detention (2011) 
-Daddy Tran: a life in 3-D 
-The Detonator (2006) 
-Dadnapped *	
-Detour (2003)
-Dallas Buyers Club *	
-Detroit *
-Damien: Omen II *	
-Deuces Wild
-Damsels in Distress *	
-Devil (2010) *
-The Dancer Upstairs	
-The Devil's Backbone *
-Dance With Me, Henry *	
-The Devil's Candy ~
-Dangerous Game *
-The Devil's Chair ~
-A Dangerous Method *	
-The Devil's Dolls *
-Danielle Steel's Daddy *	
-The Devil's Double *
-Dan in Real Life *	
-Devil's Due *
+
+The Detonator 
+Dadnapped 	
+Detour
+Detroit 
+Damien_Omen 	
+Deuces_Wild
+Damsels in Distress 	
+Devil (2010) 
+The_Dancer_Upstairs	
+The_Devil's_Backbone 
+Dance_With_Me,Henry 	
+The_Devil's_Candy 
+Dangerous_Game 
+The_Devil's_Chair 
+A_Dangerous_Method 	
+The_Devil's_Dolls 
+Danielle_Steel's_Daddy 	
+The_Devil's_Double 
+Dan_In_Real_Life 	
+Devil's_Due 
 Dans les champs de bataille 
-Devil's Knot ~
-Dans Les Villes ~	
-The Devil's Rejects *
-Dans tes bras ~	
-The Devil's Tomb *
-Dante 01 *	
-The Devil Wears Prada *
-Darby O'Gill and the Little People *	
+Devil's Knot 
+Dans Les Villes 	
+The Devil's Rejects 
+Dans tes bras 	
+The Devil's Tomb 
+Dante 01 	
+The Devil Wears Prada 
+Darby O'Gill and the Little People 	
 Devour
 Daredevil	
-Les diaboliques *
-The Darjeeling Limited *	
-Dial M for Murder *
+Les diaboliques 
+The Darjeeling Limited 	
+Dial M for Murder 
 The Dark	
 Diamond Men
-Dark Beauty *	
-Diary of a Wimpy Kid *
-The Dark Corner *	
-Diary of a Wimpy Kid: Dog Days *
-Dark Corners *	
-Diary of a Wimpy Kid: Rodrick Rules *
-Dark Country *	
-Diary of a Wimpy Kid: The Long Haul *
-Dark Horse *	
-Diary of the Dead ~
-The Darkest Hour *	
-Dick Tracy *
-The Darkest Minds *	
-The Dictator *
-The Dark Knight *	
-Die Hard *
-The Dark Knight Rises *	
-Die Hard 2 *
-Darkman *	
-Die Hard With a Vengeance *
-Darkness *	
-Diggers ~
-The Darkness (2016) *	
-The Dilemma *
-Darkness Falls	
-Dinner for Schmucks *
-Dark Ride *	
-Dinner with Friends *
-Dark Shadows *	
-Dinocroc *
-Dark Skies *	
+Dark Beauty 	
+Diary of a Wimpy Kid 
+The Dark Corner 	
+Diary of a Wimpy Kid: Dog Days 
+Dark Corners 	
+Diary of a Wimpy Kid: Rodrick Rules 
+Dark Country 	
+Diary of a Wimpy Kid: The Long Haul 
+Dark Horse 	
+Diary of the Dead 
+The_Darkest_Hour 	
+Dick_Tracy 
+The_Darkest_Minds 
+The_Dictator 
+Dark_Knight 	
+Die_Hard 
+The_Dark_Knight_Rises 
+Die_Hard_2 
+Darkman 	
+Die_Hard_With_a_Vengeance 
+Darkness 	
+Diggers 
+Darkness 	
+Dilemma 
+Darkness_Falls	
+Dinner_for_Schmucks 
+Dark_Ride 
+Dinner_with_Friends 
+Dark_Shadows 
+Dinocroc 
+Dark_Skies 	
 Director's Cut
-The Dark Tower *	
+The Dark Tower 	
 Dirty (2005)
 Dark Water (2002)	
-Dirty Deeds (2002) ~
+Dirty Deeds (2002) 
 Dark Water (2005)	
-Dirty Girl ~
-Darling *	
-Dirty Grandpa *
-Darling Companion *	
-Dirty Weekend *
-Date Movie *	
-The Disappearance (2017) ~
-Date Night *	
-The Disappearance of Alice Creed ~
-The Daughter ~	
-The Disappearance of Eleanor Rigby ~
-The Da Vinci Code *	
-The Disaster Artist *
-Dawg *	Disclosure *
-Dawn of the Dead (2004) *	
-Disconnect ~
-Dawn of the Planet of the Apes *	
-The Discovery *
-The Day (2011) ~	
-The Dish
-The Day After Peace *	
-Dish Dogz *
-Daybreakers ~	
-Disney's A Christmas Carol *
-Daydream Nation ~	
-Disney's Stitch! The Movie *
-The Day My Father Became a Bush ~	
-Disney The Secret of the Magic Gourd *
-Day Night Day Night ~	
-Disobedience *
-Day of the Dead (2008) *	
-Disorder ~
+Dirty Girl 
+Darling 
+Dirty Grandpa 
+Darling Companion 
+Dirty Weekend 
+Date Movie	
+The Disappearance (2017) 
+Date Night
+The Disappearance of Alice Creed 
+The Daughter 	
+The Disappearance of Eleanor Rigby 
+The Da Vinci Code 	
+The Disaster Artist 
+Dawg 	Disclosure 
+Dawn of the Dead (2004) 	
+Disconnect 
+Dawn of the Planet of the Apes 
+ Discovery 
+ Day (2011) 	
+ Dish
+
+Dish Dogz 
+Daybreakers 
+Disney's A Christmas Carol 
+Daydream_Nation 
+
+The Day My Father Became a Bush
+Disney The Secret of the Magic Gourd 
+Day Night Day Night 
+Disobedience 
+Day of the Dead (2008) 	
+Disorder 
 Day of the Dead 2: Contagium	
-Dissonances ~
-Day on Fire ~	
-District 9 *
-Days and Clouds *	
-Disturbia *
-Days of Thunder *	
-Divergent *
-The Day the Earth Stood Still (1951) *	
-Diverted *
-The Day the Earth Stood Still (2008) *	
-Divines ~
-Day Zero	
-Le Divorce
-Dead Ahead *	
-The Diving Bell and the Butterfly ~
+Dissonances 
+Day on Fire 
+District 9 
+Days and Clouds 
+Disturbia 
+Days of Thunder 
+Divergent 
+The Day the Earth Stood Still (1951) 
+Diverted 
+The Day the Earth Stood Still (2008) 	
+Divines 
+Day_Zero	
+Le_Divorce
+Dead Ahead 	
+The Diving Bell and the Butterfly 
 Dead and Breakfast	
-Dixie Chicks: Shut Up & Sing ~
-Dead and Buried *	
-Dixieland *
-Dead and Deader *	
-Django Unchained *
-Dead Awake *	
-D.O.A. (1950) *
-Dead Bang *	
+Dixie Chicks: Shut Up & Sing 
+Dead and Buried 	
+Dixieland 
+Dead and Deader 
+Django Unchained 
+Dead Awake 	
+D.O.A. (1950) 
+Dead Bang 	
 Dobermann
-Dead Birds ~	
-The Doctor *
-Dead Calling *	
+Dead Birds 	
+The Doctor 
+Dead Calling 	
 Doctor Faustus
-Dead Connection *	
-Doctor Strange *
-Dead Doll *	
-The Do-Deca-Pentathlon *
-Dead End (1937) *	
-Dodgeball: A True Underdog Story *
-Dead .Fish *	
+Dead Connection 	
+Doctor Strange 
+Dead Doll 	
+The Do-Deca-Pentathlon 
+Dead End (1937) 	
+Dodgeball: A True Underdog Story 
+Dead .Fish 	
 Dog Days
-Dead Funny *	
-Dog Days (2018) *
-Deadgirl ~	
-Dog Gone Love *
+Dead Funny 	
+Dog Days (2018) 
+Deadgirl 	
+Dog Gone Love 
 The Dead Girl	
-The Dog Problem ~
-Dead Heat *	
-Dog Soldiers *
-Dead in the Water	
-Dogtooth *
-Dead Like Me *	
-Dogville ~
-Dead On: Relentless II	Dom Hemingway ~
-Dead or Alive *	
-Don Jon ~
-Deadpool *	
-Le Donk & Scor-Zay-Zee *
-Deadpool 2 *	
-Donkey Punch *
-Dead Silence *	
-Don McKay *
-Dead Snow *	
-Do Not Disturb (1965) *
-The Dead Zone *
-Do Not Disturb (2012) ~
-The Deal	
-Donovan's Echo *
-Dean Spanley ~	
-Don't Be Afraid of the Dark (2011) *
-Dear John *	
-Don't Breathe *
-Dear Mr. Waldman *	
-Don't Hang Up *
-Dear Wendy ~	
-Don't Let Him In *
-Dear Zachary *	
-Don't Look Back *
-Death at a Funeral (2007) *	
-Don't Tempt Me
-Death at a Funeral (2010) *	
-Don't Touch the White Woman *
-Death Becomes Her *	
-Don't Worry, He Won't Get Far... *
-The Death Cure *	
-Don't You Forget About Me *
-Death Defying Acts ~	
-Doom *
-Death in Brunswick *	
-Doomsday *
+The Dog Problem 
+Dead_Heat 	
+Dog_Soldiers 
+Dead_in_the_Water	
+Dogtooth 
+Dead_Like_Me 	
+Dogville 
+Dead_On
+Dead_or_Alive 	
+Don_Jon 
+Deadpool 	
+Le_Donk_&_Scor-Zay-Zee 
+Deadpool_2 	
+Donkey_Punch 
+Dead_Silence 	
+Don_McKay 
+Dead_Snow 	
+Do_Not_Disturb 
+
+Do_Not_Disturb 
+	
+Donovan's_Echo 
+Dean_Spanley 	
+Don't_Be_Afraid_of_the_Dark
+Dear_John 	
+Don't Breathe 
+
+The Death Cure 	
+Don't You Forget About Me 
+Death Defying Acts 	
+Doom 
+Death in Brunswick 	
+Doomsday 
 Death in Gaza 
-The Do-Over *
-Death Note *	
-Doppelganger *
-Death of a President *
-Doppelganger Paul ~
-The Death of Stalin *	
-Dorian Gray *
+The Do-Over 
+Death Note 	
+Doppelganger 
+Death of a President 
+Doppelganger Paul 
+The Death of Stalin 	
+Dorian Gray 
 The Death of "Superman Lives"
 The Dorm 
-Death Race *	
+Death Race 	
 Dorm Daze
-Death Race 2 *	
-The Doorway *
-Death Race 2000 *	
-Dot.Kill *
-Death Sentence *	
-Dot The I *
-The Deaths of Ian Stone *	
-The Double *
+Death Race 2 	
+The Doorway 
+Death Race 2000 	
+Dot.Kill 
+Death Sentence 	
+Dot The I 
+The Deaths of Ian Stone 	
+The Double 
 Death Tunnel	
-Double Dare ~
-Death Wish 4 *	
-Double Take *
-Death Wish (2018) *	
-Doubt *
-Debbie Macomber's Mrs. Miracle *	
-Downrange ~
-D.E.B.S. *	
-Downsizing *
+Double Dare 
+Death Wish 4 	
+Double Take 
+Death Wish (2018) 	
+Doubt 
+Debbie Macomber's Mrs. Miracle 	
+Downrange 
+D.E.B.S. 	
+Downsizing 
 The Debt
-Down to the Dirt ~
-Decaying Orbit *	
-Downtown *
-Deception (2008) *	
-Down With Love *
+Down_to_the_Dirt 
+Decaying_Orbit 	
+Downtown 
+Deception (2008) 	
+Down_With Love 
 The Decline of the American Empire	
-Do You Like Hitchcock? *
-Decoys	Dracula (1931) *
-Decoys 2: Alien Seduction *	
+Do You Like Hitchcock? 
+Decoys	Dracula (1931) 
+Decoys 2: Alien Seduction 	
 Dracula 2000
-The Deep (2012) *	
-Dracula Untold *
-Deep Impact *	
-Draft Day *
-Deep Rising *	
-Drag Me to Hell *
-Deepwater Horizon *	
-Dragnet *
-Deep Winter *	
+The Deep (2012) 	
+Dracula Untold 
+Deep Impact 	
+Draft Day 
+Deep_Rising 	
+Drag_Me_to_Hell 
+Deepwater_Horizon 	
+Dragnet 
+Deep_Winter 	
 Dreamcatcher
-The Deer Hunter *	
-The Dreamers
-Defending Your Life *	
-Dreamgirls *
-Defendor ~	
-Dream House *
-Defiance *	
-Dreamland *
+The_Deer_Hunter 	
+The_Dreamers
+Defending Your Life 	
+Dreamgirls 
+Defendor 	
+Dream House 
+Defiance 	
+Dreamland 
 Déficit 
 Dreamscape 
-Definitely, Maybe 
+Definitely,Maybe 
 Dredd 
-The Definition of Insanity 
-Dressed to Kill
-Deja Vu (2006) *	
-Dr. Giggles *
-Delirium (2018) 
-Drillbit Taylor *
-Deliverance *	
-Driftwood (2006) *
-Deliver Us From Eva	
-Drive (2011) *
-Deliver Us From Evil *	
-E-
-The Eagle *	
-The Equalizer *
-Eagle Eye *	
-The Equalizer 2 *
-Eagles ~	
-Equals ~
-Eagle vs Shark *	
-Equity *
-Earthquake *	
-Erin Brockovich *
-Easier with Practice *	
-Error in Judgment *
-The East (2013) *	
-The Escape (2017) ~
-Eastern Promises ~	
-The Escape Artist (1982) *
-Easy A *	
-Escapee *
-Easy Money (2010) ~	
-Escape from New York
-Easy Virtue ~	
-Escape from Tomorrow *
-Eat My Dust 
-Escape: Human Cargo *
-Eat Sleep Die 
-Escape Plan *
+Dressed_to_Kill
+Deja_Vu 
+Dr. Giggles 
+Delirium 
+Drillbit_Taylor
+Deliverance
+Driftwood (2006) 
+Deliver_Us_From_Eva	
+Drive (2011)
+Deliver Us From Evil 
+The_Eagle 
+The Equalizer 
+Eagle Eye 
+The Equalizer 2 
+Eagles	
+Equals 
+Eagle_vs_Shark 	
+Equity 
+Earthquake 	
+Erin_Brockovich 
+Easier_with_Practice 
+Error_in_Judgment 
+The_East (2013) 	
+The_Escape (2017) 
+Eastern Promises 	
+The Escape Artist (1982) 
+Easy_A 	
+Escapee 
+Easy_Money
+Escape_from_New_York
+Easy_Virtue 
+Escape_from_Tomorrow 
+Eat_My_Dust 
+Escape:_Human_Cargo 
+Eat_Sleep_Die 
+Escape_Plan 
 Elza
-The Echo (2008) 
-The Escapist *
+The_Echo (2008) 
+The_Escapist 
 Eclipse 
-Escort West *
+Escort_West 
 Eddie Murphy "Delirious" 
-Essential Killing *
+Essential Killing 
 Eden Lake 
 Essex Boys
-Edge of Darkness *	
+Edge of Darkness 	
 E.T.: The 20th Anniversary Edition
-Edge of Outside	The Eternal *
-The Edge of Seventeen *	
-Euphoria ~
-Edge of Tomorrow *	
-EuroTrip *
-Edges of the Lord *	
+Edge of Outside	The Eternal 
+The Edge of Seventeen 
+Euphoria 
+Edge of Tomorrow 
+EuroTrip 
+Edges of the Lord 
 Evelyn
 Edison Force 
-The Even Stevens Movie *
-The Editor 
-The Event ~ *
-Edmond *	
-Event Horizon *
-Ed tv *	Everest *
-An Education 
-Everybody Has a Plan ~
-Every Day (2018) 
-F-
-Friends
-The Face of Love 
-Focus
-Face of Terror	The Fog
-Faces in the Crowd *
-The Fog of War ~
-The Factory ~	
-Following *
-Fading Gigolo *	
-Foodies: The Culinary Jetset *
-Fahrenheit 9/11 *	
-Food Inc. *
-Fahrenheit 11/9 *	
+The_Even_Stevens_Movie
+The_Editor 
+The_Event
+Edmond	
+Event_Horizon 
+Ed_tv_Everest
+An_Education 
+Everybody_Has_a_Plan
+Every_Day 
 
-G-
-godzilla vs kong
-Game of thrones
+Friends
+The_Face_of_Love 
+Focus
+Face_of_Terror_The_Fog
+Faces_in_the_Crowd 
+The_Fog of_War 
+The_Factory	
+Following
+Fading_Gigolo 	
+Foodies
+Fahrenheit_9/11 	
+Food_Inc
+Fahrenheit_11/9 	
+
+
+godzilla_vs_kong
+Game_of_thrones
 Got
-Goodbye My Lover
+Goodbye_My_Lover
 Gambull
-ghostbusters afterlife
-H-
-Hotel Transylvanie
-Halloween kills
+ghostbusters_afterlife
+
+Hotel_Transylvanie
+Halloween_kills
 Hunter
-Hunguer Games
-I-
-I Know Where I'm Going!
-I Walked With a Zombie
-I Was a Male War Bride
-Ice storm
+Hunguer_Games
+
+I_Know_Where I'm Going!
+I_Walked_With_a_Zombie
+I_Was_a_Male_War_Bride
+Ice_storm
 Idiots
 Impact
-J-
-The Jerk
+
+The_Jerk
 Journey
-Jerry Maguire
-Jason and the Argonauts
-K-
-Kill Me Heal Me
-L-
+Jerry_Maguire
+Jason_and_the_Argonauts
+
+Kill_Me_Heal_Me
+
 LIFE
-M-
-My Mad Fat diary
-Me befor you
+
+My_Mad_Fat_diary
+Me_befor_you
 Monday
-N-
+
 Nowadays
-O-
+
 othentic
 
-P-
-Pop star
-Q-
+
+Pop_star
+
 
 Quote 
 Queen
-R-
+
 Ralf
-Rainbow Brite and the Star Stealer
-Race for Your Life, Charlie Brown 
-Ring 2
-Ringu 0
-Ringu 0
+Rainbow_Brite_and_the_Star_Stealer
+Race_for_Your_Lif
+Ring_2
+Ringu_0
 Ratatouille
-Red Eye
+Red_Eye
 Rumpelstiltskin 
-S-
-Stranger on the Third Floor 
-Seven Chances
-Second Chance
-Scream 4
+
+Stranger_on_the_Third€Floor 
+Seven_Chances
+Second_Chance
+Scream_4
 Se7en
-StreamBoat Bill ,Jr.
+StreamBoat
 Siline
 Somia
-T-
-Tale of the Fox
-Taste of cherry
-Taxi Driver
-Tears of the Black Tiger
+
+Tale_of_the_Fox
+Taste_of_cherry
+Taxi_Driver
+Tears_of_the_Black_Tiger
 Twilight
 Twiggy
-U-
-Ugetso Monogatari
-Umbrellas of cherbourg
-Unbelievable TruthUnder the skin
+
+Ugetso_Monogatari
+Umbrellas_of_cherbourg
+Unbelievable_TruthUnder_the_skin
 Unforgiven
-United 93
+United_93
 Untouchables
-V-
+
 Valaseuses
 Vanishing
-Vengeance is mine
-Vera Darke
+Vengeance_is_mine
+Vera_Darke
 Vertigo
 Victim
 Videodrome
-Village of the Damned
-Vera Darke
-W-
-Wages of Fear 
-Wall street
-War Game
+Village_of_the_damned
+Vera_Darke
+
+Wages_of_Fear 
+Wall_street
+War_Game
 Wargames
 Wargames
 Warriors
-Way Down East 
-Wayne's World
+Way_Down_East 
+Wayne's_World
 
 
-X-
+
 X-Men 
 X2
-X-Men:the Last stand
-X-men : Apocalypse
-Y-
+X-Men:the_Last stand
+X-men_Apocalypse
+
 Yaaba
-Yellow Earth
-Yellow Earth
-Young Adam 
-Young Frankenstein
-Y Tu Mama Tambien
-Z-
+Yellow_Earth
+Yellow_Earth
+Young_Adam 
+Young_Frankenstein
+Y_Tu_Mama_Tambien
 Zatoichi
-Zazie dans le Metro
-Zero de Conduite
+Zazie_dans_le_Metro
+Zero_de_Conduite
 Zulu
 
